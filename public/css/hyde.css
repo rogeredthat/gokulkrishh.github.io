@@ -497,3 +497,25 @@ a:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/*--------------------- custom styles ------------------------*/
+
+.site-heading {
+  font-size: 42px;
+}
+
+.site-heading:first-letter {
+  text-transform: capitalize;
+}
+
+.masthead-inner {
+  padding: 20px;
+  top: 115px;
+}
+
+.colophon p  {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/*--------------------- end of custom styles -----------------*/
