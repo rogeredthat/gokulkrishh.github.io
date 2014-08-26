@@ -7,19 +7,19 @@
 
     <header class="masthead">
       <div class="masthead-inner">
-        <!-- <div class="avatar"></div> -->
+        <div class="avatar"></div>
         <h2 class="site-heading">{{ site.title }}</h2>
         <p class="lead">{{ site.description }}</p>
-
-        <div class="colophon">
-          <p>&copy; 2014. {{ site.author.name }} All rights reserved.</p>
-        </div>
       </div>
     </header>
 
     <div class="content container">
       {{ content }}
     </div>
-
+    <div class="footer">
+        <div class="colophon">
+          <p>&copy; 2014. {{ site.author.name }} All rights reserved.</p>
+        </div>
+    </div>
   </body>
 </html>
