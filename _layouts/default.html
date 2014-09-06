@@ -7,19 +7,27 @@
 
     <header class="masthead">
       <div class="masthead-inner">
-        <div class="avatar"></div>
+        <a class="avatar"></a>
         <h2 class="site-heading">{{ site.title }}</h2>
         <p class="lead">{{ site.description }}</p>
+        <div class="my_profile">
+        <p class="profile_desc">Get in touch with me</p>
+        {% if site.footer-links.github %}<a title="github" target="_blank" href="http://github.com/{{ site.footer-links.github }}">{% include svg_images/github.html %}</a>{% endif %}
+        {% if site.footer-links.twitter %}<a title="twitter" target="_blank" href="http://twitter.com/{{ site.footer-links.twitter }}">{% include svg_images/twitter.html %}</a>{% endif %}
+        {% if site.footer-links.facebook %}<a title="facebook" target="_blank" href="http://facebook.com/{{ site.footer-links.facebook }}">{% include svg_images/facebook.html %}</a>{% endif %}
+         {% if site.footer-links.email %}<a title="email" href="mailto: {{ site.footer-links.email }}">{% include svg_images/email.html %}</a>{% endif %}
+        </div>
       </div>
     </header>
 
     <div class="content container">
+
       {{ content }}
+
     </div>
-    <div class="footer">
-        <div class="colophon">
-          <p>&copy; 2014. {{ site.author.name }} All rights reserved.</p>
-        </div>
-    </div>
+
+    {% include footer.html %}
+
+    {% include google_analytics.html %}
   </body>
 </html>

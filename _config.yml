@@ -1,7 +1,7 @@
-title:        Gokul
-tagline:      'Frontend Developer | Open Source Promoter'
-description:  'A passionate frontend developer and an open source promoter.'
-url:          http://gokulkrishh.github.io
+title:        Gokulakrishnan
+tagline:      'Frontend Developer | Tech Enthusiast'
+description:  'Frontend Developer & Tech Enthusiast.'
+url:          http://www.gokulkrishh.github.io
 version:      1.1.1
 author:
   name:       ''
@@ -10,3 +10,9 @@ markdown:     rdiscount
 permalink:    pretty
 highlighter:  true
 paginate:     5
+footer-links :
+    github : gokulkrishh
+    twitter: gokul_i
+    facebook: gokulkrishh
+    plus: +GokulKalaikoven
+    email: krishnangokul9@gmail.com
