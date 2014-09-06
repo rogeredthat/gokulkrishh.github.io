@@ -1,0 +1,139 @@
+/*--------------------- custom styles ------------------------*/
+
+.site-heading {
+  font-size: 36px;
+}
+
+.site-heading:first-letter {
+  text-transform: capitalize;
+}
+
+.masthead-inner {
+  padding: 20px;
+  top: 35px;
+}
+
+.colophon p  {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: transparent url('../avatar.jpg');
+  border-radius: 50px;
+  background-size: 125% 125%;
+  background-position-x: -10px;
+  border: 3px solid #eee;
+  margin: 0 auto;
+  -webkit-transition:all 200ms linear;
+  -moz-transition:all 200ms linear;
+  -o-transition:all 200ms linear;
+  -ms-transition:all 200ms linear;
+  -transition:all 200ms linear;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+.avatar:active {
+  position: relative;
+  top: 2px;
+}
+
+.masthead .lead, .masthead-inner .site-heading {
+  text-align: center;
+}
+
+.masthead-inner .site-heading {
+  margin-top: 10px;
+}
+
+/*.highlight {
+  background: rgba(240, 229, 229, 1);
+  border-radius: 3px;
+  color: green;
+  padding: 1px;
+}*/
+
+.link {
+  color: #BB3094;
+  text-decoration: none;
+  -webkit-transition: all ease-in .3s;
+  -moz-transition: all ease-in .3s;
+  -o-transition: all ease-in .3s;
+  -ms-transition: all ease-in .3s;
+  transition: all ease-in .3s;
+  padding-bottom: 0.4px;
+  border-bottom: 1px solid #ccc;
+}
+
+.link:hover {
+  color: rgb(0, 168, 255);
+  color: 1px solid rgb(0, 168, 255);
+}
+
+/*------------------- social share styles     ---------------*/
+
+.social-share {
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.social {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+  position: relative;
+}
+
+.twitter_share {
+  top: 5px;
+}
+
+.fb_share {
+  top: 6.6px
+}
+
+.plus_share {
+  top: 4.5px;
+  left: 36px;
+}
+
+.inlBlk {
+  display: inline-block;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.my_profile {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 25px;
+}
+
+.my_profile a {
+  margin-left: 5px;
+}
+
+.profile_desc {
+  font-size: 17px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* end of social share */
+
+
+/*--------------------- end of custom styles -----------------*/
