@@ -47,7 +47,6 @@ List of supported transition properties are
 
 See full example below
 
-
 <p class="mtop codepen" data-width="" data-height="227" data-theme-id="7458" data-slug-hash="ltdCn" data-default-tab="result">See the Pen <a class="link" href="http://codepen.io/gokulkrishh/pen/ltdCn/"> ltdCn </a> by Gokulakrishnan ( <a class="link" href="http://codepen.io/gokulkrishh"> @gokulkrishh </a>)</p>
 
 So the transition is happening but will it support all browsers?. The answer is no. We have include prefixes to the transition properties to work.
