@@ -96,6 +96,18 @@ Adding prefixes to all the properties will make the css large. So to fix this th
 
 CSS3 tranforms are used to apply 2D or 3D property to an element. Lets see an example.
 
+{% highlight css %}
+.box {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg); //specify degree
+}
+{% endhighlight %}
+
+<p data-height="266" data-theme-id="7458" data-slug-hash="hjBJz" data-default-tab="result" data-user="gokulkrishh" class='codepen'>See the Pen <a href='http://codepen.io/gokulkrishh/pen/hjBJz/'>hjBJz</a> by Gokulakrishnan (<a href='http://codepen.io/gokulkrishh'>@gokulkrishh</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
 ### Keyframes
 
 Lets keep it short, keyframes is little similar to transitions but you can change stuff in between. So to help you with better understanding lets proceed with an example.
