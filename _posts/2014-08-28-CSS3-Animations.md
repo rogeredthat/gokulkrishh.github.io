@@ -11,6 +11,8 @@ CSS3 animations is getting more popular these days and more style supports are g
 
 The css3 transition lets us to change from one state to another state and these states can be of `:hover`, `:active`, `:checked`, `:visited`. There are four different transition properties, they are property name, duration, time function such as linear|ease-in|ease-out etc., and delay.
 
+<!--break-->
+
 Lets create a div which on hover will change, its background color to red after a 2 second delay.
 
 {% highlight markup %}

@@ -331,7 +331,7 @@ a:focus {
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin: -10px 0 10px;
+  margin: -2px 2px 15px;
   color: #9a9a9a;
 }
 
