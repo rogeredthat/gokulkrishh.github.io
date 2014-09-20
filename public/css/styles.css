@@ -1,4 +1,6 @@
-/*--------------------- custom styles ------------------------*/
+/*--------------------------------------*\
+            ##CUSTOM STYLES
+\*--------------------------------------*/
 
 .site-heading {
   font-size: 36px;
@@ -77,7 +79,20 @@
   text-decoration: none;
 }
 
-/*------------------- social share styles     ---------------*/
+/* POST */
+
+.post-image {
+  width: 50%;
+  margin: 0 auto;
+  cursor: -webkit-zoom-in;
+}
+
+.read-more {
+  text-decoration: underline;
+  color: rgb(237, 165, 82);
+}
+
+/* SOCIAL SHARE */
 
 .social-share {
   float: left;
@@ -135,7 +150,4 @@
   text-align: center;
 }
 
-/* end of social share */
-
-
-/*--------------------- end of custom styles -----------------*/
+/* END */
