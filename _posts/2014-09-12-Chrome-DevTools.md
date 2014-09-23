@@ -9,6 +9,8 @@ Difference is that canary is from future, that is new features will be available
 
 ## DevTools
 
+In this post all the tips and tricks mostly apply to `chrome canary`, if you dont find a menu or option in `actual chrome. Download canary and try.
+
 To access devTools in both chrome and canary, press `ctrl + shift + i` and in mac replace `ctrl` it with `command`.
 
 <!--more-->
