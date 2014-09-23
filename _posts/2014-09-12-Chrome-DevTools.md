@@ -27,7 +27,7 @@ Open the devTools
 
 1. Change the css color property or background property in `styles tab` by pressing `shift + click` to change any `rgba`, `rgb`, `hex`, `hsl` to `rgba`, `rgb`, `hex`, `hsl`.
 
-2. Type a property name in `styles tab` to show autocomplete property name and its values.
+2. Just type in 'styles tab' to show autocomplete property name and its possible values
 
 3. To add attribute to a html element, right click in 'element panel' and select `add attribute` and for editing the html element, use double click or right click and select `edit as HTML`.
 
