@@ -15,22 +15,25 @@ To access devTools in both chrome and canary, press `ctrl + shift + i` and in ma
 
 ### Inspect Element
 
-Right click in the chrome to find `Inspect element` menu at the end.
+Right click in the chrome to find `Inspect element` at the end of the menu.
 
 Using it you can see default styles of a webpage. We can even modify default styles and see the live changes (without refresh, else modified styles will be removed). Auto complete styles are present by default. So changing the style is more easy. See the below image.
 
 <img class="post-image" src="/assets/devtools/Inspect Element.gif" alt="devtool" title="click to open in new tab" onclick="window.open('/assets/devtools/Inspect Element.gif','_blank');">
 
 ### Pro Tips
-1. `Shift + Click` to change the color, background styles to `rgba`, `rgb`, `hex`, `hsl`.
 
-2. Type a property name in `styles` tab to show autocomplete name and its values.
+Open the devTools
 
-3. To add attribute to a html element, right and select `add attribute` menu and for editing the html element, use double click or on click to select `edit as HTML` menu.
+1. Change the css color property or background property in `styles tab` by pressing `shift + click` to change any `rgba`, `rgb`, `hex`, `hsl` to `rgba`, `rgb`, `hex`, `hsl`.
 
-4. To see the styles of an element in the box model. (ie) content, padding, border, margin go to bottom of `styles tab`.
+2. Type a property name in `styles tab` to show autocomplete property name and its values.
 
-5. To copy a html code, right click and select `copy as html` menu in element tab or simple drag and drop in the editor. See example below.
+3. To add attribute to a html element, right click in 'element panel' and select `add attribute` and for editing the html element, use double click or right click and select `edit as HTML`.
+
+4. To see the styles applied to a element in the box model. (ie) content, padding, border, margin go to the bottom of `styles tab`.
+
+5. To copy a html code, right click and select `copy as html` in element tab or simply drag and drop in any editor. See example below.
 
 <img class="post-image" src="/assets/devtools/copy as html.gif" alt="copy as html" title="click to open in new tab" onclick="window.open('/assets/devtools/copy as html.gif','_blank');">
 
