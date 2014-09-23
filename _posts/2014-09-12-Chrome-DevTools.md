@@ -33,7 +33,7 @@ Open the devTools
 
 4. To see the styles applied to a element in the box model. (ie) content, padding, border, margin go to the bottom of `styles tab`.
 
-5. To copy a html code, right click and select `copy as html` in element tab or simply drag and drop in any editor. See example below.
+5. To copy a html code, right click on `element tab` and select `copy as html` or simply drag and drop in any editor. See an example below.
 
 <img class="post-image" src="/assets/devtools/copy as html.gif" alt="copy as html" title="click to open in new tab" onclick="window.open('/assets/devtools/copy as html.gif','_blank');">
 
