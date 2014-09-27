@@ -87,9 +87,15 @@
   cursor: -webkit-zoom-in;
 }
 
+h2, h3, .site-heading {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
 .read-more {
   text-decoration: underline;
   color: rgb(237, 165, 82);
+  font-size: 22px;
 }
 
 /* SOCIAL SHARE */
