@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSS3 Animations
+description: CSS3 Animations
 ---
 
 We all know that animations are cool, especially when we see one like <a class="link" href="http://cafecuba.in" target="_blank">Cafe Cuba</a>, <a class="link" href="http://tokyomildfoundation.com" target="_blank">Tokyo Mild Foundation</a>. The days when people used flash for animation has become almost obsolete. So its time for CSS3 takeover and today we are going to see some basic animation tutorial using `CSS3` and `HTML5`.
