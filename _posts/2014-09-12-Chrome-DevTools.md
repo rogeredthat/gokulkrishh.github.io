@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chrome DevTools part - 1
+title: Chrome DevTools part-1
 ---
 
 Google chrome is one of the fastest browser around and using chrome devTools for development is simply awesome. I use two chrome browers, one is normal <a class="link" target="_blank" href="https://www.google.co.in/chrome/">chrome</a> and other is <a class="link" target="_blank" href="http://www.google.co.in/intl/en/chrome/browser/canary.html">chrome canary</a>.
