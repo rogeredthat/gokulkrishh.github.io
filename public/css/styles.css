@@ -98,6 +98,18 @@ h2, h3, .site-heading {
   font-size: 22px;
 }
 
+h1 .post-link {
+  text-decoration: underline;
+}
+
+h1 .post-link:hover {
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+  color: rgb(80, 156, 14);
+}
+
 /* SOCIAL SHARE */
 
 .social-share {
@@ -157,3 +169,10 @@ h2, h3, .site-heading {
 }
 
 /* END */
+
+/* ABOUT ME */
+
+.about-me a {
+  text-decoration: underline;
+}
+
