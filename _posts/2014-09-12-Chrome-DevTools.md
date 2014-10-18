@@ -21,7 +21,7 @@ Right click in the chrome to find `Inspect element` at the end of the menu.
 
 Using it you can see default styles of a webpage. We can even modify default styles and see the live changes (without refresh, else modified styles will be removed). Auto complete styles are present by default. So changing the style is more easy. See the below image.
 
-<img class="post-image" src="/assets/devtools/Inspect Element.gif" alt="devtool" title="click to open in new tab" onclick="window.open('/assets/devtools/Inspect Element.gif','_blank');">
+<img class="post-image lazyload" data-src="/assets/devtools/Inspect Element.gif" alt="devtool" title="click to open in new tab" onclick="window.open('/assets/devtools/Inspect Element.gif','_blank');">
 
 ### Pro Tips
 
