@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Chrome DevTools part - 1
-description: Chrome devtools
 ---
 
 Google chrome is one of the fastest browser around and using chrome devTools for development is simply awesome. I use two chrome browers, one is normal <a class="link" target="_blank" href="https://www.google.co.in/chrome/">chrome</a> and other is <a class="link" target="_blank" href="http://www.google.co.in/intl/en/chrome/browser/canary.html">chrome canary</a>.
@@ -22,7 +21,7 @@ Right click in the chrome to find `Inspect element` at the end of the menu.
 
 Using it you can see default styles of a webpage. We can even modify default styles and see the live changes (without refresh, else modified styles will be removed). Auto complete styles are present by default. So changing the style is more easy. See the below image.
 
-<img class="post-image lazyload" data-src="/assets/devtools/Inspect Element.gif" alt="devtool" title="click to open in new tab" onclick="window.open('/assets/devtools/Inspect Element.gif','_blank');">
+<img class="post-image" src="/assets/devtools/Inspect Element.gif" alt="devtool" title="click to open in new tab" onclick="window.open('/assets/devtools/Inspect Element.gif','_blank');">
 
 ### Pro Tips
 
