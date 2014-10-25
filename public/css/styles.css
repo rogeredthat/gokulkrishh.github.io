@@ -121,6 +121,7 @@ h1 .post-link:hover {
 .social {
   width: 100%;
   margin-bottom: 40px;
+  margin-top: 20px;
   margin-left: 2px;
   padding: 0;
 }
@@ -176,3 +177,13 @@ h1 .post-link:hover {
   text-decoration: underline;
 }
 
+/* Make li element as numeric */
+
+.numeric {
+  list-style-type: decimal;
+}
+
+.highlight {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
