@@ -100,6 +100,10 @@ h2, h3, .site-heading {
 
 h1 .post-link {
   text-decoration: underline;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 h1 .post-link:hover {
