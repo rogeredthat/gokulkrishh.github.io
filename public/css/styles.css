@@ -136,7 +136,7 @@ h1 .post-link:hover {
   -moz-transition: all 200ms linear;
   -o-transition: all 200ms linear;
   transition: all 200ms linear;
-  color: rgb(80, 156, 14);
+  color: #4285f4;
 }
 
 /* SOCIAL SHARE */
