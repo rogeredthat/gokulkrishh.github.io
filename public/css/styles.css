@@ -54,6 +54,24 @@
   margin-top: 10px;
 }
 
+.homeurl {
+  margin-top: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.homeurl paper-button {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal !important;
+  text-transform: inherit;
+  padding: 0;
+}
+
+paper-button.blogurl {
+  width: 50px;
+}
+
 /*.highlight {
   background: rgba(240, 229, 229, 1);
   border-radius: 3px;
@@ -92,10 +110,17 @@ h2, h3, .site-heading {
   font-weight: 500;
 }
 
-.read-more {
-  text-decoration: underline;
-  color: rgb(237, 165, 82);
-  font-size: 22px;
+.colored {
+  text-decoration: none;
+  background: #4285f4;
+  color: #fff;
+  text-transform: inherit;
+  margin-top: 20px;
+  margin-left: 0px;
+  width: 120px;
+  height: 45px;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 h1 .post-link {
@@ -167,8 +192,9 @@ h1 .post-link:hover {
 }
 
 .profile_desc {
-  font-size: 17px;
   margin-bottom: 15px;
+  font-size: 17px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-align: center;
 }

@@ -15,7 +15,7 @@ title: home
     <span class="post-date">{{ post.date | date_to_string }}</span>
       {% if post.content contains '<!--more-->' %}
         {{ post.content | split:'<!--more-->' | first }}
-      <p><a class="read-more" href="{{ post.url }}">Continue reading...</a></p>
+      <a href="{{ post.url }}"><paper-button raised="" class="colored" role="button" tabindex="0" style="overflow: visible;">Read more..</paper-button></a>
       {% else %}
         {{ post.content }}
       {% endif %}
