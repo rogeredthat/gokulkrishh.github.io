@@ -111,9 +111,23 @@ h2, h3, .site-heading {
 }
 
 .colored {
-  text-decoration: none;
   background: #4285f4;
   color: #fff;
+}
+
+.non-colored {
+  background: #fafafa;
+}
+
+.colored-yellow {
+  color: #fff;
+  background: #FFBF00;
+}
+
+.colored,
+.non-colored,
+.colored-yellow {
+  text-decoration: none;
   text-transform: inherit;
   margin-top: 20px;
   margin-left: 0px;
