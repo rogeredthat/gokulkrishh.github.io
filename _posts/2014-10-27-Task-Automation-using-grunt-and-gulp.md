@@ -124,7 +124,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 ####Full grunt task runner from my git repo
 
-<a href="https://github.com/gokulkrishh/Grunt-Task-Runner" target="_blank"><paper-button raised="" class="non-colored" role="button" tabindex="0" style="overflow: visible;">Download</paper-button></a>
+<a href="https://github.com/gokulkrishh/Grunt-Task-Runner" target="_blank"><paper-button raised="" class="colored-yellow" role="button" tabindex="0" style="overflow: visible;">Download</paper-button></a>
 
 <br>
 ##Gulp
@@ -149,7 +149,7 @@ gulp.task('other-task', function () {
 });
 {%endhighlight %}
 
-If you run the above task, using `gulp sample` in terminal. First other-task will run and after sample task will print its message in terminal. Okay lets write some tasks using following gulp plugins.
+If you run the above task, using `gulp sample` in terminal. First other-task will run and after that sample task will print the message in terminal. Okay lets write some tasks using following gulp plugins.
 
 <ul>
   <li class="numeric"><a href="https://www.npmjs.org/package/gulp-jshint" class="link" target="_blank">jshint</a> - To check hint error</li>
@@ -211,9 +211,9 @@ gulp.task('default', ['styles', 'scripts', 'watch']);
 
 ####Full gulp task runner from my git repo
 
-<a href="https://github.com/gokulkrishh/task-runner" target="_blank"><paper-button raised="" class="non-colored" role="button" tabindex="0" style="overflow: visible;">Download</paper-button></a>
+<a href="https://github.com/gokulkrishh/task-runner" target="_blank"><paper-button raised="" class="colored-yellow" role="button" tabindex="0" style="overflow: visible;">Download</paper-button></a>
 
 <br>
-The `pipe()` in gulp reads from a readable stream and writes to a writeable stream and more explanation about pipe can be found <a href="http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options" class="link" target="_blank">here</a>. Writing a task in gulp is much simper than grunt. Each has their own advantages. But we are not going into war of which is better. Use which ever you feel right for you.
+The `pipe()` in gulp reads from a readable stream and writes to a writeable stream and more explanation about pipe can be found <a href="http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options" class="link" target="_blank">here</a>. Writing a task in gulp is much simper than grunt. Each of them have their own advantages. But we are not going into war of which is better. Use grunt or gulp what ever you feel right for you.
 
 If you like this post tweet and share it and for any doubt comment below. Thanks.
