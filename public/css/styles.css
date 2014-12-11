@@ -56,6 +56,7 @@
 
 .homeurl {
   margin-top: 20px;
+  margin-bottom: 10px;
   font-weight: 100;
   text-align: center;
 }
@@ -94,6 +95,11 @@ paper-button.blogurl {
 .link:hover {
   color: rgb(0, 168, 255);
   color: 1px solid rgb(0, 168, 255);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
   text-decoration: none;
 }
 
@@ -230,4 +236,13 @@ h1 .post-link:hover {
 .highlight {
   margin-top: 35px;
   margin-bottom: 35px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.tldr {
+  background: #EAEAEA;
+  padding: 10px;
 }

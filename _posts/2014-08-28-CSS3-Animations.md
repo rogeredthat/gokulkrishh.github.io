@@ -200,3 +200,6 @@ Some Example
 <p class="mtop mbot codepen" data-height="266" data-theme-id="7458" data-slug-hash="GeqEl" data-default-tab="result">See the Pen <a class="link" href="http://codepen.io/gokulkrishh/pen/GeqEl/">GeqEl</a> by Gokulakrishnan (<a class="link" href="http://codepen.io/gokulkrishh">@gokulkrishh</a>)</p>
 
 Thats it for today. adios. Share my post if you like or leave a comment below.
+
+
+<script src="https://codepen.io/assets/embed/ei.js" async> </script>
