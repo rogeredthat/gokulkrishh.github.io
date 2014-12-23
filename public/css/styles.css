@@ -246,3 +246,58 @@ h1 .post-link:hover {
   background: #EAEAEA;
   padding: 10px;
 }
+
+
+/* HOME AVATAR ANIMATION FADE IN */
+
+.avatar {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  animation-delay: .1s;
+  opacity: 0;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    transform: translate3d(0,10%,0);
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    transform: translate3d(0,10%,0);
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translate3d(0,10%,0);
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}
