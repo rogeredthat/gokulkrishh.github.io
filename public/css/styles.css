@@ -231,3 +231,133 @@ h1 .post-link:hover {
   margin-top: 35px;
   margin-bottom: 35px;
 }
+
+
+/* About me project lists */
+
+.projects {
+  margin: 30px auto;
+  padding: 0;
+  text-align: center;
+}
+
+.project-list {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border: #000000 2px solid;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  margin: 10px;
+  list-style-type: none;
+}
+
+.fadeInUp {
+  -webkit-animation: fadeInUpBig 1s;
+  -moz-animation: fadeInUpBig 1s;
+  -o-animation: fadeInUpBig 1s;
+  -ms-animation: fadeInUpBig 1s;
+  animation: fadeInUpBig 1s;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 130px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.77);
+  padding: 1px;
+  transition: 200ms all linear;
+  -webkit-transition: 200ms all linear;
+  -moz-transition: 200ms all linear;
+  -ms-transition: 200ms all linear;
+}
+
+.project-list,
+.project-overlay {
+  /*cursor: pointer;*/
+}
+
+.project-overlay:hover,
+.project-list:hover .project-overlay {
+  top: 0px;
+  background: rgba(0, 0, 0, 1);
+  transition: 200ms all linear;
+  -webkit-transition: 200ms all linear;
+  -moz-transition: 200ms all linear;
+  -ms-transition: 200ms all linear;
+}
+
+.project-overlay:hover .project-title,
+.project-list:hover .project-title {
+  margin-top: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.project-overlay:hover .project-desc,
+.project-list:hover .project-desc {
+  display: block;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-desc {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 16px;
+  display: none;
+}
+
+.project-desc a {
+  color: #fff;
+}
+
+.project-title,
+.project-desc {
+  color: #fff;
+  text-align: center;
+}
+
+/* About me FadeInUp Animation */
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@-moz-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
