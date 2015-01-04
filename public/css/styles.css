@@ -56,6 +56,7 @@
 
 .homeurl {
   margin-top: 20px;
+  margin-bottom: 10px;
   font-weight: 100;
   text-align: center;
 }
@@ -94,6 +95,11 @@ paper-button.blogurl {
 .link:hover {
   color: rgb(0, 168, 255);
   color: 1px solid rgb(0, 168, 255);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
   text-decoration: none;
 }
 
@@ -232,6 +238,7 @@ h1 .post-link:hover {
   margin-bottom: 35px;
 }
 
+<<<<<<< HEAD
 
 /* About me project lists */
 
@@ -359,5 +366,69 @@ h1 .post-link:hover {
   100% {
     opacity: 1;
     transform: translateY(0)
+  }
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.tldr {
+  background: #EAEAEA;
+  padding: 10px;
+}
+
+
+/* HOME AVATAR ANIMATION FADE IN */
+
+.avatar {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  animation-delay: .1s;
+  opacity: 0;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    transform: translate3d(0,10%,0);
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    transform: translate3d(0,10%,0);
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translate3d(0,10%,0);
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
   }
 }
