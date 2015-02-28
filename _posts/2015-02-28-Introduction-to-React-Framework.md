@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to React Framework
+title: Introduction to React.js Framework
 ---
 
  <a href="http://facebook.github.io/react/" class="link" target="_blank">React</a> is javascript framework created by Facebook and Instagram. I would say React as Javascript library which can be used as V in MVC. Its been designed by thinking perfomance in mind. React is getting more popular these days and big companies such as Facebook, Instagram, Yahoo, even whatsapp's newly launched <a href="https://web.whatsapp.com/" class="link" target="_blank">whatsapp web</a> uses react components in production. So lets get into it.
