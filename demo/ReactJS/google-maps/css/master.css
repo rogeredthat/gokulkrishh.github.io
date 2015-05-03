@@ -93,7 +93,7 @@ body {
   font-family: 'Open Sans', 'Arial', sans-serif;
   background: #f3f3f3; }
 
-h1 {
+.heading {
   font-size: 25px;
   text-transform: capitalize;
   position: relative;

@@ -58,7 +58,7 @@ var Searchbar = React.createClass({
           marker.setMap(null);
         }
 
-        var popupContent = '<div id="content"><h1 id="firstHeading" class="heading">Your location is found..</h1></div>'
+        var popupContent = '<div id="content"><h1 id="firstHeading">Your location is found..</h1></div>'
 
         var infowindow = new google.maps.InfoWindow({
           content: popupContent
@@ -85,8 +85,8 @@ var Searchbar = React.createClass({
   render: function() {
     return (
       <div className="search-container">
-        <h1>Google maps using React.js</h1>
-        <img src="../images/current-location.png" className="current-location" onClick={this.getCurrentLocation} />
+        <h1 className="heading">Google maps using React.js</h1>
+        <img src="./images/current-location.png" className="current-location" onClick={this.getCurrentLocation} />
 
         <span className="current-location-txt" onClick={this.getCurrentLocation}>Current Location</span>
 
