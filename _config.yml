@@ -8,7 +8,9 @@ author:
   email:      'krishnangokul9@gmail'
 markdown:     rdiscount
 permalink:    pretty
-highlighter:  false
+highlighter:  true
+kramdown:
+  input: GFM
 paginate:     3
 footer-links :
     github : gokulkrishh
