@@ -16,7 +16,7 @@ The css3 transition lets us to change from one state to another state and these 
 
 Lets create a div which on hover will change, its background color to red after a 2 second delay.
 
-{% highlight html %}
+{% highlight markup%}
 <div class="box animate"></div>
 {% endhighlight %}
 
