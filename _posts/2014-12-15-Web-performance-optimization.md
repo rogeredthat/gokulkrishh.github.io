@@ -163,7 +163,7 @@ Reference to `DOM elements` causes DOM Leak and prevents automatic garbage colle
 
 Lets see an example
 
-{% highlight markup %}
+{% highlight html %}
 	<div id="container">
 	<h1 id="heading">I am just a heading nothing much</h1>
 </div>

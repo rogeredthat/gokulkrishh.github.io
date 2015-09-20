@@ -57,7 +57,7 @@ Unlike many popular frameworks like <a href="https://docs.angularjs.org/guide/da
 
 ####HTML markup
 
-{%highlight markup%}
+{%highlight html%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,7 +120,7 @@ React.render(
 
 ##Full example
 
-{%highlight markup%}
+{%highlight html%}
 <!DOCTYPE html>
 <html>
 <head>
