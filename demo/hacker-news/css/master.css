@@ -105,7 +105,7 @@ body {
     height: 210px;
     position: absolute;
     top: 0;
-    background: #ff6600 url('../images/logo.jpg') no-repeat center;
+    background: #F77016 url('../images/logo.jpg') no-repeat center;
     background-position-y: -150px;
     will-change: transform; }
 
@@ -130,12 +130,15 @@ body {
     font-weight: bold;
     text-align: center;
     cursor: pointer; }
-    .menu li.selected {
-      border-bottom: 2px solid #fff; }
   .menu a {
     color: #fff;
     text-decoration: none;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    width: 60px;
+    display: inline-block;
+    padding-bottom: 9px; }
+    .menu a.selected {
+      border-bottom: 2px solid #fff; }
 
 .container {
   width: 1024px;
@@ -169,7 +172,10 @@ body {
   padding-top: 10px;
   margin-bottom: 10px; }
   .content-container .title {
-    margin-right: 10px; }
+    margin-right: 10px;
+    text-decoration: none; }
+    .content-container .title:hover {
+      text-decoration: underline; }
   .content-container .about-content {
     width: 85%;
     margin: 20px auto 0 45px;
@@ -177,7 +183,8 @@ body {
     line-height: 1.5; }
     .content-container .about-content a {
       color: #4F8EFA;
-      text-decoration: underline; }
+      text-decoration: underline;
+      margin-top: 0; }
   .content-container .about-page {
     min-height: 360px;
     cursor: default; }
@@ -245,6 +252,8 @@ body {
   top: 10px;
   cursor: default;
   padding-top: 1px; }
+  .profile-content:hover {
+    background: #fff; }
   .profile-content .spinner-container {
     margin: 0 auto;
     text-align: center;
@@ -260,14 +269,15 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     color: #000; }
     .profile-content h1:first-child {
       margin-top: 15px; }
   .profile-content span:nth-child(even) {
     color: #4d5763;
     word-break: break-all;
-    line-height: 1.5; }
+    line-height: 1.5;
+    font-weight: normal; }
 
 .page-not-found {
   margin-top: 250px;
@@ -458,13 +468,14 @@ body {
 ------------------------------------------------*/
 @media (max-width: 479px) and (min-width: 320px) {
   .container {
-    width: 300px; }
+    width: 300px;
+    min-height: 350px; }
   .bottom-content {
     width: 280px;
     min-height: 55px;
     margin-top: 0; }
   .menu {
-    width: 380px;
+    width: 360px;
     margin: 0 auto;
     top: 115px; }
     .menu li {

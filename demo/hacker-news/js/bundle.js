@@ -85,6 +85,10 @@ var Message = _react2['default'].createClass({
   }
 });
 
+var redirectToChild = function redirectToChild(location, replaceState) {
+  replaceState(null, '/new');
+};
+
 //Render the components
 _react2['default'].render(_react2['default'].createElement(
   _reactRouter.Router,
@@ -92,7 +96,7 @@ _react2['default'].render(_react2['default'].createElement(
   _react2['default'].createElement(
     _reactRouter.Route,
     { path: '/', component: App },
-    _react2['default'].createElement(_reactRouter.IndexRoute, { component: _componentsFeedsNewContentJsx2['default'] }),
+    _react2['default'].createElement(_reactRouter.IndexRoute, { component: _componentsFeedsNewContentJsx2['default'], onEnter: redirectToChild }),
     _react2['default'].createElement(_reactRouter.Route, { path: 'new', component: _componentsFeedsNewContentJsx2['default'] }),
     _react2['default'].createElement(_reactRouter.Route, { path: 'show', component: _componentsFeedsShowContentJsx2['default'] }),
     _react2['default'].createElement(_reactRouter.Route, { path: 'jobs', component: _componentsFeedsJobsContentJsx2['default'] }),
@@ -148,7 +152,7 @@ var AboutContent = React.createClass({
         React.createElement(
           "p",
           { className: "about-content" },
-          "The HackerNews site is create using ",
+          "The HackerNews site is created using ",
           React.createElement(
             "a",
             { href: "https://github.com/HackerNews/API" },
@@ -207,17 +211,221 @@ module.exports = AboutContent;
 
 'use strict';
 
-var JobsContent = React.createClass({
-  displayName: "JobsContent",
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _spinnerJsx = require('../spinner.jsx');
+
+var _spinnerJsx2 = _interopRequireDefault(_spinnerJsx);
+
+var _reactRouter = require('react-router');
+
+var pagination = 10;
+
+var JobsContent = _react2['default'].createClass({
+  displayName: 'JobsContent',
+
+  getInitialState: function getInitialState() {
+    return {
+      newStories: [],
+      isLoading: true,
+      isLoadingMore: false
+    };
+  },
+
+  showLoader: function showLoader() {
+    this.setState({
+      isLoading: true
+    });
+  },
+
+  hideLoader: function hideLoader() {
+    this.setState({
+      isLoading: false
+    });
+  },
+
+  componentDidMount: function componentDidMount() {
+    this.getContentJson(0, pagination, false);
+  },
+
+  getContentJson: function getContentJson(startIndex, pagination, isLoadingMore) {
+
+    var sourceUrl = 'https://hacker-news.firebaseio.com/v0/jobstories.json';
+
+    $.get(sourceUrl, (function (response) {
+
+      if (response && response.length == 0) {
+        this.hideLoader();
+        return;
+      }
+
+      for (var i = startIndex; i <= pagination; i++) {
+        if (i == pagination) {
+
+          if (this.isMounted()) this.hideLoader();
+
+          if (this.isMounted() && isLoadingMore) this.setState({ isLoadingMore: false });
+
+          this.loadMore(pagination);
+          return false;
+        }
+
+        this.getContentData(response[i], pagination);
+      }
+    }).bind(this));
+  },
+
+  getContentData: function getContentData(id) {
+
+    var contentUrl = 'https://hacker-news.firebaseio.com/v0/item/' + id + '.json';
+
+    $.get(contentUrl, (function (response) {
+
+      if (response == null) {
+        if (this.isMounted()) {
+          this.hideLoader();
+        }
+        return;
+      }
+
+      var domain = response.url ? response.url.split(':')[1].split('//')[1].split('/')[0] : '';
+
+      response.domain = domain;
+
+      this.setState({ newStories: this.state.newStories.concat(response) });
+    }).bind(this));
+  },
+
+  convertTime: function convertTime(time) {
+    var d = new Date();
+    var currentTime = Math.floor(d.getTime() / 1000);
+    var seconds = currentTime - time;
+
+    // more that two days
+    if (seconds > 2 * 24 * 3600) {
+      return 'a few days ago';
+    }
+
+    // a day
+    if (seconds > 24 * 3600) {
+      return 'yesterday';
+    }
+
+    if (seconds > 3600) {
+      return 'a few hours ago';
+    }
+
+    if (seconds > 1800) {
+      return 'Half an hour ago';
+    }
+
+    if (seconds > 60) {
+      return Math.floor(seconds / 60) + ' minutes ago';
+    }
+  },
+
+  loadMore: function loadMore(pagination) {
+
+    $(window).unbind('scroll');
+
+    $(window).bind('scroll', (function () {
+
+      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        var previousCount = pagination + 1;
+        pagination = pagination + 11;
+
+        this.setState({ isLoadingMore: true }); //To show loader at the bottom
+
+        this.getContentJson(previousCount, pagination, true);
+      }
+    }).bind(this));
+  },
+
+  changeMenu: function changeMenu() {
+    $('.menu li').removeClass('selected');
+  },
 
   render: function render() {
-    return React.createElement(
-      "div",
-      { className: "content-container" },
-      React.createElement(
-        "div",
-        { className: "content" },
-        "Jobs Content"
+    var _this = this;
+
+    var newStories = this.state.newStories.map(function (response, index) {
+
+      var searchQuery = 'https://www.google.co.in/search?q=' + response.title;
+
+      return _react2['default'].createElement(
+        'div',
+        { key: index },
+        _react2['default'].createElement(
+          'div',
+          { className: 'content' },
+          _react2['default'].createElement(
+            'a',
+            { className: 'title', target: '_blank', href: response.url },
+            response.title,
+            ' '
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: response.domain ? 'domain' : 'hide' },
+            ' (',
+            _react2['default'].createElement(
+              'a',
+              { href: 'http://' + response.domain, title: 'Domain' },
+              response.domain
+            ),
+            ')'
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: 'bottom-content' },
+            _react2['default'].createElement(
+              'span',
+              null,
+              response.score,
+              ' ',
+              response.score > 1 ? ' points' : ' point',
+              ' '
+            ),
+            _react2['default'].createElement(
+              'span',
+              null,
+              'by',
+              _react2['default'].createElement(
+                _reactRouter.Link,
+                { onClick: _this.changeMenu, className: 'author', to: '/user/' + response.by },
+                response.by
+              )
+            ),
+            _react2['default'].createElement(
+              'span',
+              null,
+              ' | ',
+              _this.convertTime(response.time),
+              ' '
+            )
+          )
+        )
+      );
+    }, this);
+
+    return _react2['default'].createElement(
+      'div',
+      { className: 'content-container' },
+      _react2['default'].createElement(
+        'div',
+        { className: this.state.isLoading ? '' : 'hide' },
+        _react2['default'].createElement(_spinnerJsx2['default'], null)
+      ),
+      newStories,
+      this.props.children,
+      _react2['default'].createElement(
+        'div',
+        { className: this.state.isLoadingMore ? 'mtop50' : 'hide' },
+        _react2['default'].createElement(_spinnerJsx2['default'], null)
       )
     );
   }
@@ -225,7 +433,7 @@ var JobsContent = React.createClass({
 
 module.exports = JobsContent;
 
-},{}],5:[function(require,module,exports){
+},{"../spinner.jsx":8,"react":207,"react-router":28}],5:[function(require,module,exports){
 
 'use strict';
 
@@ -465,17 +673,221 @@ module.exports = NewContent;
 
 'use strict';
 
-var ShowContent = React.createClass({
-  displayName: "ShowContent",
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _spinnerJsx = require('../spinner.jsx');
+
+var _spinnerJsx2 = _interopRequireDefault(_spinnerJsx);
+
+var _reactRouter = require('react-router');
+
+var pagination = 10;
+
+var ShowContent = _react2['default'].createClass({
+  displayName: 'ShowContent',
+
+  getInitialState: function getInitialState() {
+    return {
+      newStories: [],
+      isLoading: true,
+      isLoadingMore: false
+    };
+  },
+
+  showLoader: function showLoader() {
+    this.setState({
+      isLoading: true
+    });
+  },
+
+  hideLoader: function hideLoader() {
+    this.setState({
+      isLoading: false
+    });
+  },
+
+  componentDidMount: function componentDidMount() {
+    this.getContentJson(0, pagination, false);
+  },
+
+  getContentJson: function getContentJson(startIndex, pagination, isLoadingMore) {
+
+    var sourceUrl = 'https://hacker-news.firebaseio.com/v0/showstories.json';
+
+    $.get(sourceUrl, (function (response) {
+
+      if (response && response.length == 0) {
+        this.hideLoader();
+        return;
+      }
+
+      for (var i = startIndex; i <= pagination; i++) {
+        if (i == pagination) {
+
+          if (this.isMounted()) this.hideLoader();
+
+          if (this.isMounted() && isLoadingMore) this.setState({ isLoadingMore: false });
+
+          this.loadMore(pagination);
+          return false;
+        }
+
+        this.getContentData(response[i], pagination);
+      }
+    }).bind(this));
+  },
+
+  getContentData: function getContentData(id) {
+
+    var contentUrl = 'https://hacker-news.firebaseio.com/v0/item/' + id + '.json';
+
+    $.get(contentUrl, (function (response) {
+
+      if (response.length == 0) {
+        if (this.isMounted()) {
+          this.hideLoader();
+        }
+        return;
+      }
+
+      var domain = response.url ? response.url.split(':')[1].split('//')[1].split('/')[0] : '';
+
+      response.domain = domain;
+
+      this.setState({ newStories: this.state.newStories.concat(response) });
+    }).bind(this));
+  },
+
+  convertTime: function convertTime(time) {
+    var d = new Date();
+    var currentTime = Math.floor(d.getTime() / 1000);
+    var seconds = currentTime - time;
+
+    // more that two days
+    if (seconds > 2 * 24 * 3600) {
+      return 'a few days ago';
+    }
+
+    // a day
+    if (seconds > 24 * 3600) {
+      return 'yesterday';
+    }
+
+    if (seconds > 3600) {
+      return 'a few hours ago';
+    }
+
+    if (seconds > 1800) {
+      return 'Half an hour ago';
+    }
+
+    if (seconds > 60) {
+      return Math.floor(seconds / 60) + ' minutes ago';
+    }
+  },
+
+  loadMore: function loadMore(pagination) {
+
+    $(window).unbind('scroll');
+
+    $(window).bind('scroll', (function () {
+
+      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        var previousCount = pagination + 1;
+        pagination = pagination + 11;
+
+        this.setState({ isLoadingMore: true }); //To show loader at the bottom
+
+        this.getContentJson(previousCount, pagination, true);
+      }
+    }).bind(this));
+  },
+
+  changeMenu: function changeMenu() {
+    $('.menu li').removeClass('selected');
+  },
 
   render: function render() {
-    return React.createElement(
-      "div",
-      { className: "content-container" },
-      React.createElement(
-        "div",
-        { className: "content" },
-        "Show Content"
+    var _this = this;
+
+    var newStories = this.state.newStories.map(function (response, index) {
+
+      var searchQuery = 'https://www.google.co.in/search?q=' + response.title;
+
+      return _react2['default'].createElement(
+        'div',
+        { key: index },
+        _react2['default'].createElement(
+          'div',
+          { className: 'content' },
+          _react2['default'].createElement(
+            'a',
+            { className: 'title', target: '_blank', href: response.url },
+            response.title,
+            ' '
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: response.domain ? 'domain' : 'hide' },
+            ' (',
+            _react2['default'].createElement(
+              'a',
+              { href: 'http://' + response.domain, title: 'Domain' },
+              response.domain
+            ),
+            ')'
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: 'bottom-content' },
+            _react2['default'].createElement(
+              'span',
+              null,
+              response.score,
+              ' ',
+              response.score > 1 ? ' points' : ' point',
+              ' '
+            ),
+            _react2['default'].createElement(
+              'span',
+              null,
+              'by',
+              _react2['default'].createElement(
+                _reactRouter.Link,
+                { onClick: _this.changeMenu, className: 'author', to: '/user/' + response.by },
+                response.by
+              )
+            ),
+            _react2['default'].createElement(
+              'span',
+              null,
+              ' | ',
+              _this.convertTime(response.time),
+              ' '
+            )
+          )
+        )
+      );
+    }, this);
+
+    return _react2['default'].createElement(
+      'div',
+      { className: 'content-container' },
+      _react2['default'].createElement(
+        'div',
+        { className: this.state.isLoading ? '' : 'hide' },
+        _react2['default'].createElement(_spinnerJsx2['default'], null)
+      ),
+      newStories,
+      this.props.children,
+      _react2['default'].createElement(
+        'div',
+        { className: this.state.isLoadingMore ? 'mtop50' : 'hide' },
+        _react2['default'].createElement(_spinnerJsx2['default'], null)
       )
     );
   }
@@ -483,7 +895,7 @@ var ShowContent = React.createClass({
 
 module.exports = ShowContent;
 
-},{}],7:[function(require,module,exports){
+},{"../spinner.jsx":8,"react":207,"react-router":28}],7:[function(require,module,exports){
 
 'use strict';
 
@@ -514,20 +926,16 @@ var Menu = _react2['default'].createClass({
     return {
       items: [{
         name: 'new',
-        id: 1,
-        selected: true
+        id: 1
       }, {
         name: 'show',
-        id: 2,
-        selected: false
+        id: 2
       }, {
         name: 'jobs',
-        id: 3,
-        selected: false
+        id: 3
       }, {
         name: 'about',
-        id: 4,
-        selected: false
+        id: 4
       }]
     };
   },
@@ -560,10 +968,10 @@ var Menu = _react2['default'].createClass({
         this.state.items.map((function (item, index) {
           return _react2['default'].createElement(
             'li',
-            { className: item.selected ? 'selected' : '', key: item.id },
+            { key: item.id },
             _react2['default'].createElement(
               _reactRouter.Link,
-              { to: '/' + item.name, onClick: this.changeMenu.bind(this, index) },
+              { to: '/' + item.name, activeClassName: 'selected' },
               item.name
             )
           );
