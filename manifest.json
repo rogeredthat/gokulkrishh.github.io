@@ -1,0 +1,36 @@
+{
+  "name": "Progressive Web App",
+  "short_name": "PWA",
+  "icons": [{
+        "src": "demo/sw/images/icons/G-Logo-128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      }, {
+        "src": "demo/sw/images/icons/G-Logo-152.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      }, {
+        "src": "demo/sw/images/icons/G-Logo-144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }, {
+        "src": "demo/sw/images/icons/G-Logo-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "demo/sw/images/icons/G-Logo-256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "demo/sw/images/icons/G-Logo-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }],
+  "start_url": "demo/sw/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f5",
+  "theme_color": "#212225"
+}
