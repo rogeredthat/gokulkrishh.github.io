@@ -9,12 +9,13 @@ var myCaches = [staticCache];
 
 //Files to cache
 var files = [
+  "/demo/sw/",
   "/demo/sw/index.html",
   "/demo/sw/index.html?page=1", //Query string is treated as new page in serviceWorker
   "/demo/sw/css/styles.css",
-  "/demo/sw/js/app.js",
   "/demo/sw/images/icons/G-Logo-128.png",
   "/demo/sw/images/icons/G-Logo-192.png",
+  "/demo/sw/js/app.js",
   "/demo/sw/js/jquery-2.1.4.js"
 ];
 
@@ -48,20 +49,14 @@ self.addEventListener("install", function (event) {
 self.addEventListener("fetch", function (event) {
   console.log("Event: Fetch");
 
-  var requestURL = new URL(event.request.url);
-
-  console.log("Fetching -->", requestURL);
+  console.log("Fetching -->", event.request.url);
 
   //To tell browser to evaluate the result of event
   event.respondWith(
     caches.match(event.request) //To match current request with cached request, return it
       .then(function(response) {
         //If response found return it else fetch again.
-        if (response) {
-          return response;
-        }
-
-        return fetch(event.request);
+        return response || fetch(event.request);
       })
       .catch(function(error) {
         console.error("Error: ", error);
@@ -78,7 +73,7 @@ self.addEventListener("fetch", function (event) {
 self.addEventListener("activate", function (event) {
   console.log("Event: Activate");
 
-  var cacheWhitelist = ["initial-cache-v1", "initial-api-cache-v1"];
+  var cacheWhitelist = ['initial-cache-v1'];
 
   //Delete unwanted caches
   event.waitUntil(
@@ -91,4 +86,4 @@ self.addEventListener("activate", function (event) {
         });
       })
   );
-})
+});
