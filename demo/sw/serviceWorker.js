@@ -1,6 +1,6 @@
 
 //Cache polyfil to support cacheAPI in all browsers
-importScripts("/demo/sw/cache-polyfill.js");
+importScripts("./cache-polyfill.js");
 
 var staticCache = "initial-static-v1";
 
@@ -10,14 +10,13 @@ var myCaches = [staticCache];
 //Files to cache
 var files = [
   "/",
-  "/demo/sw/",
-  "/demo/sw/index.html",
-  "/demo/sw/index.html?page=1", //Query string is treated as new page in serviceWorker
-  "/demo/sw/css/styles.css",
-  "/demo/sw/images/icons/G-Logo-128.png",
-  "/demo/sw/images/icons/G-Logo-192.png",
-  "/demo/sw/js/app.js",
-  "/demo/sw/js/jquery-2.1.4.js"
+  "/index.html",
+  "/index.html?page=1", //Query string is treated as new page in serviceWorker
+  "/css/styles.css",
+  "/images/icons/G-Logo-128.png",
+  "/images/icons/G-Logo-192.png",
+  "/js/app.js",
+  "/js/jquery-2.1.4.js"
 ];
 
 //Adding install event listener
