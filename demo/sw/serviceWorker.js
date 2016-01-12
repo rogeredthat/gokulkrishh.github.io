@@ -9,14 +9,14 @@ var myCaches = [staticCache];
 
 //Files to cache
 var files = [
-  "/",
-  "/index.html",
-  "/index.html?page=1", //Query string is treated as new page in serviceWorker
-  "/css/styles.css",
-  "/images/icons/G-Logo-128.png",
-  "/images/icons/G-Logo-192.png",
-  "/js/app.js",
-  "/js/jquery-2.1.4.js"
+  "./",
+  "./index.html",
+  "./index.html?page=1", //Query string is treated as new page in serviceWorker
+  "./css/styles.css",
+  "./images/icons/G-Logo-128.png",
+  "./images/icons/G-Logo-192.png",
+  "./js/app.js",
+  "./js/jquery-2.1.4.js"
 ];
 
 //Adding install event listener
