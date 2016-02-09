@@ -93,14 +93,20 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
+    -webkit-transition: all ease-in .3s;
+    -moz-transition: all ease-in .3s;
+    -o-transition: all ease-in .3s;
+    -ms-transition: all ease-in .3s;
+    transition: all ease-in .3s;
+    padding-bottom: 0.4px;
+    border-bottom: 1px solid #ccc;
 
     &:visited {
-        color: darken($brand-color, 15%);
+      color: darken($brand-color, 15%);
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+      color: rgb(0, 168, 255);
     }
 }
 
@@ -132,7 +138,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background: #272822;
 }
 
 code {

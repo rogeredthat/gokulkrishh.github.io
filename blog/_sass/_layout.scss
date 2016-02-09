@@ -256,7 +256,7 @@
 
 .wrapper h1 {
   color: #444;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   margin-top: 30px;
   text-align: center;
@@ -266,9 +266,18 @@
   text-align: center;
 }
 
+.post-meta {
+  font-style: italic;  
+}
+
 .post-meta,
 .post-link {
   color: #444;
+}
+
+.post-link {
+  border: none;
+  text-decoration: underline;
 }
 
 .page-content {
@@ -281,4 +290,27 @@
     margin-bottom: 20px;
 
   }
+}
+
+.wrapper .post-title {
+  font-size: 30px;
+  text-align: left;
+}
+
+code {
+  padding: .15em .5em;
+  font-size: 100%;
+  border-radius: 3px;
+  color: #f8f8f2;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  font-weight: 600;
+  color: #444;
+}
+
+.post-content h2 {
+  font-size: 24px;
 }
