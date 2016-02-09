@@ -13,8 +13,6 @@ In this post all the tips and tricks mostly apply to `chrome canary`, if you don
 
 To access devTools in both chrome and canary, press `ctrl + shift + i` and in mac replace `ctrl` it with `command`.
 
-<!--more-->
-
 ### Inspect Element
 
 Right click in the chrome to find `Inspect element` at the end of the menu.
