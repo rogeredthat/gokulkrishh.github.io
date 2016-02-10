@@ -60,7 +60,7 @@ Here is an example
 
 <a class="link" target="_blank" href="https://developer.chrome.com/devtools/docs/commandline-api">Go here</a> to see all command line api for chrome console.
 
-### Must have chrome extentions for developers:
+### Must have chrome extensions for developers:
 
 1. <a class="link" target="_blank" href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en">Postman</a> is a tool to make REST-API calls.
 

@@ -5,11 +5,11 @@ title: Task automation using grunt and gulp
 
 In web application development, there are numerous tasks involved like `minify`, `uglify` and `compressing` JS and CSS files. Doing these tasks manually will take almost 30% - 40% of the development time. So today we are going to automate above mentioned tasks using <a href="http://gulpjs.com/" class="link" target="_blank">Gulp</a> and <a href="http://gruntjs.com/" class="link" target="_blank">Grunt</a>. Lets hit the road.
 
-##Grunt
+## Grunt
 
 Grunt is a javascript task runner. Latest version of grunt is `v0.4.5` There are lots of grunt <a href="http://gruntjs.com/plugins" class="link" target="_blank">plugins</a> available. But we will see few important plugins.
 
-####Plugins:
+#### Plugins:
 
 - <a href="https://github.com/gruntjs/grunt-contrib-jshint" class="link" target="_blank">jshint</a> - To check
 

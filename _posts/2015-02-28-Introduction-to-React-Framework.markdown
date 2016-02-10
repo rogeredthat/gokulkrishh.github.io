@@ -5,7 +5,7 @@ title: Introduction to React.js Framework
 
  <a href="http://facebook.github.io/react/" class="link" target="_blank">React</a> is javascript framework created by Facebook and Instagram. I would say React as Javascript library which can be used as V in MVC. Its been designed by thinking performance in mind. React is getting more popular these days and big companies such as Facebook, Instagram, Yahoo, even whatsapp's newly launched <a href="https://web.whatsapp.com/" class="link" target="_blank">whatsapp web</a> uses react components in production. So lets get into it.
 
-##Main concepts
+## Main concepts
 
 <ul>
   <li class="dot">User Interface</li>
@@ -14,7 +14,7 @@ title: Introduction to React.js Framework
 </ul>
 
 
-###User Interface
+### User Interface
 
 It is easier to create components in react.js and it can be used in almost any web application. Lets create a simple component using <a href="https://jsx.github.io/" class="link" target="_blank">Javascript syntax extention</a> shortly `JSX`. If you don't know what is JSX, its simple which uses XML like syntax to write Javascript and later converts it to actual Javascript using JSX Compiler.
 
@@ -43,17 +43,17 @@ var hello = React.createClass({displayName: "hello",
 
 As you can see, writing components in react.js using JSX is very easy and efficient. Many developers who uses react.js uses `JSX`. Know more about JSX <a href="http://facebook.github.io/react/docs/jsx-in-depth.html" class="link" target="_blank">here</a>.
 
-###Virtual DOM
+### Virtual DOM
 
 React uses Virtual DOM and it is nothing but the mimics of the actual DOM tree. Doing a DOM operations can be very expensive and keeping track of previous DOM states are very hard. In react, each components have states. Virtual DOM allows you to update a view whenever a state is changed using <a href="http://calendar.perfplanet.com/2013/diff/" class="link" target="_blank">Diff algorithm</a>.
 
-###Data Flow
+### Data Flow
 
 Unlike many popular frameworks like <a href="https://docs.angularjs.org/guide/databinding" class="link" target="_blank">AngularJS</a>, <a href="http://emberjs.com/guides/object-model/bindings/" class="link" target="_blank">EmberJS</a>. React offer unidirectional data flow which is easier to maintain according to the developer who created react.js. In future, Ember.js is moving from two way binding to one way binding as well.
 
 ###Lets create an Hello World application with React.
 
-####HTML markup
+#### HTML markup
 
 {%highlight html%}
 <!DOCTYPE html>
@@ -75,7 +75,7 @@ Unlike many popular frameworks like <a href="https://docs.angularjs.org/guide/da
 </html>
 {%endhighlight %}
 
-####React components using JSX syntax
+#### React components using JSX syntax
 
 {%highlight javascript%}
 /** @jsx React.DOM */
@@ -91,7 +91,7 @@ var HelloWorld = React.createClass({
 
 `React.createClass()` accepts an object and a specification. `/** @jsx React.DOM */` is used to avoid syntax error from the JS compiler in the browser. In the above example, we have used the render method which returns a html h1 tag. Which in turn compiled to actual JS by JSX compiler.
 
-####Compiled components file
+#### Compiled components file
 
 {%highlight javascript%}
 /** @jsx React.DOM */
@@ -116,7 +116,7 @@ React.render(
 );
 {%endhighlight %}
 
-##Full example
+## Full example
 
 {%highlight html%}
 <!DOCTYPE html>
@@ -151,11 +151,11 @@ React.render(
 
 React also offers developer tool for chrome browser to debug the react application. Click <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" class="link" target="_blank">here</a> to install.
 
-##DEMO
+## DEMO
 
 <a href="/demo/ReactJS/helloworld.html" target="_blank">DEMO</a>
 
-##Conclusions
+## Conclusions
 
 This article provides an overview of React.js framework. And I hope you liked my article and helped you to understand a brief about what is React.js. I will try to post more about react.js in future. For any doubts please comment below.
 

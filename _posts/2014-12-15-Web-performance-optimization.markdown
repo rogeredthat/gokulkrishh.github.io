@@ -17,7 +17,7 @@ The core content of site should render with in `1000ms`. If it fails, then the u
 
 - <a target="_blank" href="https://www.Mozilla.com">Mozilla</a> speed up their site by `2.2sec` gave them `160 million` more firefox downloads/year.
 
-####  Steps involved in site optimization
+#### Steps involved in site optimization
 
 1. Set performance budget.
 
