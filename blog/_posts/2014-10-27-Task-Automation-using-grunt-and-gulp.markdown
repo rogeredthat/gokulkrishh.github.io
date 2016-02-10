@@ -11,19 +11,25 @@ Grunt is a javascript task runner. Latest version of grunt is `v0.4.5` There are
 
 ####Plugins:
 
-<ul>
-  <li class="numeric"><a href="https://github.com/gruntjs/grunt-contrib-jshint" class="link" target="_blank">jshint</a> - To check <a href="http://www.jshint.com/docs/" class="link" target="_blank">hint</a> error in JS files.</li>
-  <li class="numeric"><a href="https://github.com/gruntjs/grunt-contrib-uglify" class="link" target="_blank">uglify</a> - To minify JS files.</li>
-  <li class="numeric"><a href="" class="link" target="_blank">cssmin</a> - To minify CSS files.</li>
-  <li class="numeric"><a href="https://github.com/gruntjs/grunt-contrib-watch" class="link" target="_blank">watch</a> - To watch file changes and do minify and reload the browser.</li>
-  <li class="numeric"><a href="https://github.com/gruntjs/grunt-contrib-connect" class="link" target="_blank">connect</a> - To create a development server to test the application.</li>
-  <li class="numeric"><a href="https://github.com/gruntjs/grunt-contrib-copy" class="link" target="_blank">copy</a> - To copy files to build folder.</li>
-</ul>
+- <a href="https://github.com/gruntjs/grunt-contrib-jshint" class="link" target="_blank">jshint</a> - To check
 
-####Requirement:
-<ul>
-  <li><a href="http://nodejs.org/" class="link" target="_blank">Node.js</a></li>
-</ul>
+- <a href="http://www.jshint.com/docs/" class="link" target="_blank">hint</a> error in JS files.
+
+- <a href="https://github.com/gruntjs/grunt-contrib-uglify" class="link" target="_blank">uglify</a> - To minify JS files.
+
+- <a href="" class="link" target="_blank">cssmin</a> - To minify CSS files.
+
+- <a href="https://github.com/gruntjs/grunt-contrib-watch" class="link" target="_blank">watch</a> - To watch file changes and do minify and reload the browser.
+
+- <a href="https://github.com/gruntjs/grunt-contrib-connect" class="link" target="_blank">connect</a> - To create a development server to test the application.
+
+- <a href="https://github.com/gruntjs/grunt-contrib-copy" class="link" target="_blank">copy</a> - To copy files to build folder.
+
+
+#### Requirement:
+
+- <a href="http://nodejs.org/" class="link" target="_blank">Node.js</a>
+
 After installing node, type the below command in terminal
 
     npm install -g grunt-cli //-g is to install globally
@@ -120,24 +126,21 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 <!-- Download the full <a href="" class="link" target="_blank">grunt task runner</a>. -->
 
-####Full grunt task runner from my git repo
+#### Full grunt task runner from my git repo
 
 <a href="https://github.com/gokulkrishh/Grunt-Task-Runner" target="_blank">Download</a>
 
-<br>
-##Gulp
+## Gulp
 
 Gulp is stream builder which uses code-over-configuration using <a href="http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options" class="link" target="_blank">node's streams</a>. Latest version of gulp is `v3.8.9`. There are more than 750 <a href="http://gulpjs.com/plugins" class="link" target="_blank">plugins</a> available for gulp. As i mentioned gulp uses code instead of configuration written in grunt. If you are familiar with node, then writing a task in gulp is very simple.
 
 Lets see an example
-
 
 {%highlight javascript%}
 var gulp = require('gulp');
 
 //task name with any dependency and a callback function
 gulp.task('sample', ['other-task'], function () {
-
   //run after finishing other-task
   console.log('---------- Running sample task ---->>>');
 });
@@ -149,23 +152,24 @@ gulp.task('other-task', function () {
 
 If you run the above task, using `gulp sample` in terminal. First other-task will run and after that sample task will print the message in terminal. Okay lets write some tasks using following gulp plugins.
 
-<ul>
-  <li class="numeric"><a href="https://www.npmjs.org/package/gulp-jshint" class="link" target="_blank">jshint</a> - To check hint error</li>
-  <li class="numeric"><a href="https://www.npmjs.org/package/gulp-minify-css" class="link" target="_blank">minify-css</a> - To minify CSS files</li>
-  <li class="numeric"><a href="https://www.npmjs.org/package/gulp-uglify" class="link" target="_blank">uglify</a> - To minify JS files</li>
-  <li class="numeric"><a href="https://www.npmjs.org/package/gulp-concat" class="link" target="_blank">concat</a> - To make a single file</li>
-  <li class="numeric"><a href="https://www.npmjs.org/package/gulp-watch" class="link" target="_blank">watch</a> - To watch file changes</li>
-  <li class="numeric"><a href="https://www.npmjs.org/package/gulp-webserver" class="link" target="_blank">server</a> - To create local development server</li>
-</ul>
+1. <a href="https://www.npmjs.org/package/gulp-jshint" class="link" target="_blank">jshint</a> - To check hint error
+
+2. <a href="https://www.npmjs.org/package/gulp-minify-css" class="link" target="_blank">minify-css</a> - To minify CSS files
+
+3. <a href="https://www.npmjs.org/package/gulp-uglify" class="link" target="_blank">uglify</a> - To minify JS files
+
+4. <a href="https://www.npmjs.org/package/gulp-concat" class="link" target="_blank">concat</a> - To make a single file
+
+5. <a href="https://www.npmjs.org/package/gulp-watch" class="link" target="_blank">watch</a> - To watch file changes
+
+6. <a href="https://www.npmjs.org/package/gulp-webserver" class="link" target="_blank">server</a> - To create local development server
 
 {%highlight javascript%}
-
 var gulp = require('gulp'),
 var jshint = require('gulp-jshint'),
 var stylish = require('jshint-stylish'),
 var concat = require('gulp-concat'),
 var uglify = require('gulp-uglify');
-
 
 //check errors in JS files and do uglify, concat
 
@@ -207,11 +211,10 @@ gulp.task('default', ['styles', 'scripts', 'watch']);
 
 <!-- Download full <a href="" class="link" target="_blank">gulp task runner</a>. -->
 
-####Full gulp task runner from my git repo
+#### Full gulp task runner from my git repo
 
 <a href="https://github.com/gokulkrishh/Gulp-task-runner" target="_blank">Download</a>
 
-<br>
 The `pipe()` in gulp reads from a readable stream and writes to a writeable stream and more explanation about pipe can be found <a href="http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options" class="link" target="_blank">here</a>. Writing a task in gulp is much simper than grunt. Each of them have their own advantages. But we are not going into war of which is better. Use grunt or gulp what ever you feel right for you.
 
-If you like this post tweet and share it and for any doubt comment below. Thanks.
+If you like this post tweet and share it. Thanks.

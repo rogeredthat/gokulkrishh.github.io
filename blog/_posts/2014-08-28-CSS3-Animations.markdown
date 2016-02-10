@@ -4,13 +4,14 @@ title: CSS3 Animations
 description: CSS3 Animations
 ---
 
-We all know that animations are cool, especially when we see one like <a class="link" href="http://cafecuba.in" target="_blank">Cafe Cuba</a>, <a class="link" href="http://tokyomildfoundation.com" target="_blank">Tokyo Mild Foundation</a>. The days when people used flash for animation has become almost obsolete. So its time for CSS3 takeover and today we are going to see some basic animation tutorial using `CSS3` and `HTML5`.
+We all know that animations are cool, especially when we see one like <a href="http://cafecuba.in" target="_blank">Cafe Cuba</a>, <a href="http://tokyomildfoundation.com" target="_blank">Tokyo Mild Foundation</a>. The days when people used flash for animation has become almost obsolete. So its time for CSS3 takeover and today we are going to see some basic animation tutorial using `CSS3` and `HTML5`.
 
 CSS3 animations is getting more popular these days and more style supports are getting added in modern browser like chrome, mozilla, IE > 10. So lets get started with some basics.
 
 ### Transitions
 
-The css3 transition lets us to change from one state to another state and these states can be of `:hover`, `:active`, `:checked`, `:visited`. There are four different transition properties, they are property name, duration, time function such as linear|ease-in|ease-out etc., and delay.
+The css3 transition lets us to change from one state to another state and these states can be of `:hover`, `:active`, `:checked`, `:visited`.
+There are four different transition properties, they are property name, duration, time function such as `linear|ease-in|ease-out` etc., and delay.
 
 Lets create a div which on hover will change, its background color to red after a 2 second delay.
 
@@ -44,11 +45,11 @@ List of supported transition properties are
 
 * background
 * color
-* border etc. See full <a class="link" href="http://www.w3.org/TR/css3-transitions/#properties-from-css-" target="_blank">list here</a>
+* border etc. See full <a href="http://www.w3.org/TR/css3-transitions/#properties-from-css-" target="_blank">list here</a>
 
 See full example below
 
-<p class="mtop codepen" data-width="" data-height="227" data-theme-id="7458" data-slug-hash="ltdCn" data-default-tab="result">See the Pen <a class="link" href="http://codepen.io/gokulkrishh/pen/ltdCn/"> ltdCn </a> by Gokulakrishnan ( <a class="link" href="http://codepen.io/gokulkrishh"> @gokulkrishh </a>)</p>
+<p class="mtop codepen" data-width="" data-height="227" data-theme-id="7458" data-slug-hash="ltdCn" data-default-tab="result">See the Pen <a href="http://codepen.io/gokulkrishh/pen/ltdCn/"> ltdCn </a> by Gokulakrishnan ( <a href="http://codepen.io/gokulkrishh"> @gokulkrishh </a>)</p>
 
 So the transition is happening but will it support all browsers?. The answer is no. We have include prefixes to the transition properties to work.
 
@@ -89,8 +90,8 @@ Adding prefixes to all the properties will make the css large. So to fix this th
 }
 {% endhighlight %}
 
-<code class="highlight">-webkit-</code> is for safari, chrome, <code class="highlight">-moz-</code> for mozilla, <code class="highlight">-o-</code> is for opera and for IE 10+ <code class="highlight">-ms-</code>. To check CSS3 styles supported by browsers go to <a class="link" href="http://caniuse.com/" target="_blank">Can I use</a>.</p>
-<p>So CSS3 transition is nothing but changing from one state to another. But you might be wondering, is animation supposed to do something like a ball moving round and round or something like this <a class="link" href="http://www.clicktorelease.com/code/css3dclouds/" target="_blank">CSS3 Cloud</a>. Yep you are right, so we are going to learn some basics on <code class="highlight">keyframes</code> which will later help you to do some fancy stuff like in the above link.</p>
+<code class="highlight">-webkit-</code> is for safari, chrome, <code class="highlight">-moz-</code> for mozilla, <code class="highlight">-o-</code> is for opera and for IE 10+ <code class="highlight">-ms-</code>. To check CSS3 styles supported by browsers go to <a href="http://caniuse.com/" target="_blank">Can I use</a>.</p>
+<p>So CSS3 transition is nothing but changing from one state to another. But you might be wondering, is animation supposed to do something like a ball moving round and round or something like this <a href="http://www.clicktorelease.com/code/css3dclouds/" target="_blank">CSS3 Cloud</a>. Yep you are right, so we are going to learn some basics on <code class="highlight">keyframes</code> which will later help you to do some fancy stuff like in the above link.</p>
 
 ### Transform
 
@@ -114,9 +115,9 @@ Lets keep it short, keyframes is little similar to transitions but you can chang
 
 The below example will change the <b>&lt;p&gt;&lt;/p&gt;</b> tag text to 5 different colors alternatively when you hover.
 
-<p class="mtop mbot codepen" data-height="266" data-theme-id="7458" data-slug-hash="kFrpx" data-default-tab="result">See the Pen <a class="link" href="http://codepen.io/gokulkrishh/pen/kFrpx/">kFrpx</a> by Gokulakrishnan (<a class="link" href="http://codepen.io/gokulkrishh">@gokulkrishh</a>).</p>
+<p class="mtop mbot codepen" data-height="266" data-theme-id="7458" data-slug-hash="kFrpx" data-default-tab="result">See the Pen <a href="http://codepen.io/gokulkrishh/pen/kFrpx/">kFrpx</a> by Gokulakrishnan (<a href="http://codepen.io/gokulkrishh">@gokulkrishh</a>).</p>
 
-Keyframes have some property similar to transitions which is <code class="highlight">animation-name</code> instead of property-name, <code class="highlight">duration</code>, <code class="highlight">timing function</code>, <code class="highlight">delay</code>. Lets see in details with keyframes</p>
+Keyframes have some property similar to transitions which is <code class="highlight">animation-name</code> instead of property-name, <code class="highlight">duration</code>, <code class="highlight">timing function</code>, <code class="highlight">delay</code>. Lets see in details with keyframes
 
 {% highlight css %}
 /* @keyframes name */
@@ -191,13 +192,12 @@ To reduce lengthy css styles. We will be using without prefixes. So the state ch
 }
 {% endhighlight %}
 
-Animations has more direction properties such as <code class="highlight">normal|reverse|alternate|alternate-reverse|initial|inherit</code> and also animation has one more property <code class="highlight">fill-mode: none|forwards|backwards|both|initial|inherit</code> for full list of animation properties go to <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">MDN</a>.</p>
+Animations has more direction properties such as <code class="highlight">normal|reverse|alternate|alternate-reverse|initial|inherit</code> and also animation has one more property <code class="highlight">fill-mode: none|forwards|backwards|both|initial|inherit</code> for full list of animation properties go to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">MDN</a>.
 
 Some Example
 
-<p class="mtop mbot codepen" data-height="266" data-theme-id="7458" data-slug-hash="GeqEl" data-default-tab="result">See the Pen <a class="link" href="http://codepen.io/gokulkrishh/pen/GeqEl/">GeqEl</a> by Gokulakrishnan (<a class="link" href="http://codepen.io/gokulkrishh">@gokulkrishh</a>)</p>
+<p class="mtop mbot codepen" data-height="266" data-theme-id="7458" data-slug-hash="GeqEl" data-default-tab="result">See the Pen <a href="http://codepen.io/gokulkrishh/pen/GeqEl/">GeqEl</a> by Gokulakrishnan (<a href="http://codepen.io/gokulkrishh">@gokulkrishh</a>)</p>
 
 Thats it for today. adios. Share my post if you like or leave a comment below.
-
 
 <script src="https://codepen.io/assets/embed/ei.js" async> </script>

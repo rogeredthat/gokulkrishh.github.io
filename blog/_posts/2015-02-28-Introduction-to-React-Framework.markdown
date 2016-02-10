@@ -37,7 +37,7 @@ var hello = React.createClass({displayName: "hello",
   //render method takes input data and returns what to display
   render: function () {
     return (React.createElement("h1", null, "Hello World!!")); //h1 tag
-  }
+ }
 });
 {%endhighlight %}
 
