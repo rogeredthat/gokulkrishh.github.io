@@ -1,32 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  {% include head.html %}
-<body>
-  <header class="masthead">
-    <div class="masthead-inner">
-      <a class="avatar" href="http://gokulkrishh.github.io/about" title="Know more about me"></a>
-      <h2 class="site-heading">{{ site.title }}</h2>
-      <p class="lead">{{ site.description }}</p>
-      <div class="my_profile">
-      <p class="profile_desc">Get in touch with me</p>
-      {% if site.footer-links.github %}<a title="github" target="_blank" href="http://github.com/{{ site.footer-links.github }}">{% include svg_images/github.html %}</a>{% endif %}
-      {% if site.footer-links.twitter %}<a title="twitter" target="_blank" href="http://twitter.com/{{ site.footer-links.twitter }}">{% include svg_images/twitter.html %}</a>{% endif %}
-      {% if site.footer-links.facebook %}<a title="facebook" target="_blank" href="http://facebook.com/{{ site.footer-links.facebook }}">{% include svg_images/facebook.html %}</a>{% endif %}
-       {% if site.footer-links.email %}<a title="email" href="mailto: {{ site.footer-links.email }}">{% include svg_images/email.html %}</a>{% endif %}
+<html>
 
-       <div class="homeurl">
-         <a href="/about">About</a> | <a href="/">Blog</a>
-       </div>
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
       </div>
     </div>
-  </header>
 
-  <div class="content container">
-    {{ content }}
-  </div>
+    {% include footer.html %}
 
-  {% include footer.html %}
+  </body>
 
-  {% include google_analytics.html %}
-</body>
 </html>

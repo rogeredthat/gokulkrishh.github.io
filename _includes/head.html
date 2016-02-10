@@ -1,40 +1,14 @@
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="Author" content="Gokulakrishnan, Gokulkrishh, gokulkrishh, Gokulakrishnan Kalaikovan">
-  <meta name="description" content="{{page.title}}{% if page.title contains 'Home' %} - Frontend Developer | Tech Enthusiast{% endif %}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2a2a2a">
-  
-  <title>
-    {% if page.title %}{{ page.title }} &middot; {% endif %}
-    {{ site.tagline }}
-  </title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/styles.css">
-  <link rel="stylesheet" href="/public/css/prism.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700">
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="theme-color" content="#FA4B3E">
 
-  <!-- Icons -->
-  <link rel="shortcut icon" href="/public/favicon.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-
-  <script src="{{ site.baseurl }}/bower_components/platform/platform.js" defer></script>
-  <link rel="import" href="{{ site.baseurl }}/bower_components/paper-button/paper-button.html">
-  <style>
-  html /deep/ core-icon {
-    display: inline-block;
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    fill: currentcolor;
-    position: relative;
-    height: 24px;
-    width: 24px;
-  }
-  </style>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,700">
 </head>

@@ -1,42 +1,19 @@
 ---
 layout: default
-title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1>
-      <a class="post-link" href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<div class="home">
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-      {% if post.content contains '<!--more-->' %}
-        {{ post.content | split:'<!--more-->' | first }}
-      <a href="{{ post.url }}"><paper-button raised="" class="colored" role="button" tabindex="0" style="overflow: visible;">Read more..</paper-button></a>
-      {% else %}
-        {{ post.content }}
-      {% endif %}
-  </div>
-  {% endfor %}
-</div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="older">Older</a>
-  {% else %}
-    <span class="next">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a href="/" class="newer">Newer</a>
-    {% else %}
-      <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="previous">Newer</span>
-  {% endif %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
 </div>
