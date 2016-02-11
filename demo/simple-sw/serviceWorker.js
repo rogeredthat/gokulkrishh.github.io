@@ -1,16 +1,16 @@
 //Cache polyfil to support cacheAPI in all browsers
-importScripts('/cache-polyfill.js');
+importScripts('./cache-polyfill.js');
 
 var staticCache = "my-static-files"; //Cache name
 
 //Files to cache
 var filesToCache = [
-  "/",
-  "/index.html",
-  "/?page=1", //Query string are treated a different page
-  "images/G-Logo-128.png",
-  "css/main.css",
-  "js/main.js"
+  "./",
+  "./index.html",
+  "./?page=1", //Query string are treated a different page
+  "./images/G-Logo-128.png",
+  "./css/main.css",
+  "./js/main.js"
 ];
 
 //Adding a eventlistener to install event
