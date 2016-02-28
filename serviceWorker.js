@@ -10,6 +10,8 @@ var myCaches = [staticCache];
 //Files to cache
 var files = [
   "/",
+  "/index.html",
+  "/images/avatar.jpg",
   "./demo/sw/",
   "./demo/sw/index.html",
   "./demo/sw/index.html?page=1", //Query string is treated as new page in serviceWorker
