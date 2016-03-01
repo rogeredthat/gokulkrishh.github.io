@@ -10,9 +10,9 @@ I like performance and a site with load speed ```< 10s```. If you want to make y
 
 I have done lot of contributions to open source applications/tools in <a href="https://github.com/gokulkrishh/" target="_blank">Github</a>. Make sure to check it out.
 
-Also I am <a href="https://developers.google.com/experts/people/gokulakrishnan-kalaikovan.html" target="_blank">Google Developer Expert</a> for Web Technologies.
+Also I am a <a href="https://developers.google.com/experts/people/gokulakrishnan-kalaikovan.html" target="_blank">Google Developer Expert</a> for Web Technologies.
 
-#### My talk's
+#### My Talk's
 
 - <a href="http://gokulkrishh.github.io/demo/pwa/" target="_blank">Progressive web Applications</a>
 
