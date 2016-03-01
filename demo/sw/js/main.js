@@ -1,7 +1,7 @@
 //If serviceWorker supports, then register it.
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("./serviceWorker.js") //Point to serviceWorker file
+    .register("../../serviceWorker.js") //Point to serviceWorker file
     .then(function (serviceWorkerRegistration) {
       console.log("serviceWorker is registered");
       document.getElementById("sw-register-state").textContent = "✓";
