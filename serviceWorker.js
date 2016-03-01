@@ -90,3 +90,27 @@ self.addEventListener("activate", function (event) {
       })
   );
 });
+
+//Listen to push Event
+self.addEventListener("push", function(event) {
+  console.log("Push notification received ", event);
+
+  var title = "Push notification demo";
+  var body = "You have received a notification";
+  var tag = "demo";
+  var icon = "/demo/sw/images/icons/G-Logo-152.png";
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      tag: tag,
+      icon: icon
+    })
+  );
+});
+
+//On click event for notification to close
+self.addEventListener("notificationclick", function(event) {
+  console.log("Notification received ", event);
+  event.notification.close();
+});
