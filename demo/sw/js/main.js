@@ -21,7 +21,7 @@ var btn = document.getElementById("turn-on-notification");
 //Tokens
 var apiKey = "AIzaSyCjrU5SqotSg2ybDLK_7rMMt9Rv0dMusvY";
 var pushManager;
-var gcmURL = "https://android.googleapis.com/gcm/send/";
+var gcmURL = "https://android.googleapis.com/gcm/send";
 
 
 //To check push notification support
@@ -60,7 +60,8 @@ function subscribeNotification() {
     .then(function (subscription) {
       console.log("Successfully subscribed: ", subscription);
       console.log("Endpoint: ", subscription.endpoint);
-      logCurlCommand(subscription.endpoint.split(gcmURL)[1]);
+      var endPoint = subscription.endpoint.split("/");
+      logCurlCommand(endPoint[endPoint.length - 1]);
       changeStatus(true);
 
       //Send notification
