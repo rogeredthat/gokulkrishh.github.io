@@ -1,8 +1,8 @@
 
 //Cache polyfil to support cacheAPI in all browsers
-importScripts("./demo/sw/cache-polyfill.js");
+importScripts("./cache-polyfill.js");
 
-var staticCache = "initial-site-v1";
+var staticCache = "initial-static-v1";
 
 //My Cache names
 var myCaches = [staticCache];
@@ -10,12 +10,14 @@ var myCaches = [staticCache];
 //Files to cache
 var files = [
   "/",
-  "/index.html",
-  "/css/main.css",
-  "/css/syntax.css",
-  "/css/prism.css",
-  "/js/main.js",
-  "/images/avatar.jpg"
+  "index.html",
+  "index.html?page=1", //Query string is treated as new page in serviceWorker
+  "css/styles.css",
+  "images/icons/G-Logo-128.png",
+  "images/icons/G-Logo-192.png",
+  "js/app.js",
+  "js/main.js",
+  "js/jquery-2.1.4.js"
 ];
 
 //Adding install event listener
@@ -48,6 +50,8 @@ self.addEventListener("install", function (event) {
 self.addEventListener("fetch", function (event) {
   console.log("Event: Fetch");
 
+  console.log("Fetching -->", event.request.url);
+
   //To tell browser to evaluate the result of event
   event.respondWith(
     caches.match(event.request) //To match current request with cached request, return it
@@ -70,7 +74,7 @@ self.addEventListener("fetch", function (event) {
 self.addEventListener("activate", function (event) {
   console.log("Event: Activate");
 
-  var cacheWhitelist = ['initial-cache-v1', 'initial-site-v1'];
+  var cacheWhitelist = ['initial-cache-v1'];
 
   //Delete unwanted caches
   event.waitUntil(
@@ -83,4 +87,28 @@ self.addEventListener("activate", function (event) {
         });
       })
   );
+});
+
+//Listen to push Event
+self.addEventListener("push", function(event) {
+  console.log("Push notification received ", event);
+
+  var title = "Push notification demo";
+  var body = "You have received a notification";
+  var tag = "demo";
+  var icon = "./images/icons/G-Logo-152.png";
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      tag: tag,
+      icon: icon
+    })
+  );
+});
+
+//On click event for notification to close
+self.addEventListener("notificationclick", function(event) {
+  console.log("Notification received ", event);
+  event.notification.close();
 });

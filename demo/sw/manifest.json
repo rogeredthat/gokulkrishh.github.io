@@ -28,9 +28,11 @@
         "type": "image/png",
         "sizes": "512x512"
       }],
-  "start_url": "./index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f5f5f5",
-  "theme_color": "#212225"
+  "theme_color": "#212225",
+  "gcm_sender_id": "847244712742",
+  "gcm_user_visible_only": true
 }
