@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
 
     {% include header.html %}
@@ -15,7 +13,7 @@
 
     {% include footer.html %}
 
-  <script src="js/main.js"></script>
+    <!-- Service Worker -->
+    <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
   </body>
-
 </html>

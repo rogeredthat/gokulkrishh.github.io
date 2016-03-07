@@ -13,7 +13,6 @@ var files = [
   "/index.html",
   "/css/main.css",
   "/css/syntax.css",
-  "/css/prism.css",
   "/js/main.js",
   "/images/avatar.jpg"
 ];
