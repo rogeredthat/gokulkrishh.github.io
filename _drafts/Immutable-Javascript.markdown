@@ -2,6 +2,7 @@
 layout: post
 title: Immutable Javascript
 description: Immutable Javascript
+comments: true
 ---
 
 #### What is a mutable object ?
