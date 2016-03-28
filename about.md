@@ -17,3 +17,13 @@ Also I am a <a href="https://developers.google.com/experts/people/gokulakrishnan
 - <a href="http://gokulkrishh.github.io/demo/pwa/" target="_blank">Progressive web Applications</a>
 
 - <a href="http://gokulkrishh.github.io/angular-best-practices/" target="_blank">Best practices in AngularJS</a>
+
+#### My recent contribution's
+
+- <a href="https://qrcode-scanner.herokuapp.com" target="_blank">QR Code scanner - A progressive web application</a>
+
+- <a href="https://progressive-web-application.herokuapp.com" target="_blank">Push notification demo - A progressive web application</a>
+
+- <a href="https://github.com/code-kotis/react-floating-label" target="_blank">Floating Label - A react component based on material design</a>
+
+- <a href="https://github.com/hemanth/generator-pwa" target="_blank">Generator-pwa - A yeoman generator for pwa applications</a>
