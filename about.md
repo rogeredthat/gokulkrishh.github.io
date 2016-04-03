@@ -20,7 +20,7 @@ Also I am a <a href="https://developers.google.com/experts/people/gokulakrishnan
 
 #### My recent contribution's
 
-- <a href="https://qrcode-scanner.herokuapp.com" target="_blank">QR Code scanner - A progressive web application</a>
+- <a href="https://qrcodescan.in" target="_blank">QR Code scanner - A progressive web application</a>
 
 - <a href="https://progressive-web-application.herokuapp.com" target="_blank">Push notification demo - A progressive web application</a>
 
