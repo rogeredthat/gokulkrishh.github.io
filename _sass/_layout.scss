@@ -323,3 +323,8 @@ code {
   color: #00a8ff;
   font-weight: bold;
 }
+
+.social-content + p a {
+  text-decoration: none;
+  border: 0;
+}
