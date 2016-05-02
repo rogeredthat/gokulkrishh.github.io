@@ -6,7 +6,7 @@ permalink: /about/
 
 I am Gokulakrishnan Kalaikovan. I work as a UI Developer based in Bangalore, India. I have 2.7+ years of experience in building robust and user friendly web sites/applications.
 
-I like performance and a site with load speed ```< 10s```. If you want to make your site to load faster with better performance, just <a href="mailto:krishnangokul9@gmail.com" target="_blank">email</a> me your site.
+I like performance and a site with load speed ```< 5s```. If you want to make your site to load faster with better performance, just <a href="mailto:krishnangokul9@gmail.com" target="_blank">email</a> me your site.
 
 I have done lot of contributions to open source applications/tools in <a href="https://github.com/gokulkrishh/" target="_blank">Github</a>. Make sure to check it out.
 
