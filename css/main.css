@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* my styles */
+
+body {
+  background: #fff;
+  color: #222;
+  font: 16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 70px auto 20px;
+  display: block;
+  text-align: center;
+  background: url(../images/avatar.jpg) no-repeat;
+  background-size: contain;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+header .wrapper,
+footer .wrapper {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.tag {
+  color: #808080;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+.tag span {
+  color: #E91E63;
+}
+
+.page-content {
+  min-height: 200px;
+  margin: 20px auto 20px;
+  max-width: 480px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+  padding-bottom: 40px;
+}
+
+.page-content i {
+  color: #000;
+  padding-right: 5px;
+}
+
+.page-content i::before {
+  font-size: 20px;
+}
+
+i.fa-github {
+  margin-left: 10px;
+}
+
+.page-content h3 {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+li {
+  line-height: 1.5em;
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+footer {
+  color: #808080;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+  header,
+  .page-content {
+    width: 768px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .page-content h3 {
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  header,
+  .page-content {
+    width: 480px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .page-content h3 {
+    font-size: 1.6em;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  header,
+  .page-content {
+    width: 320px;
+  }
+
+  header h1  {
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+
+  .avatar {
+    margin: 50px auto 10px;
+  }
+
+  .page-content h3 {
+    font-weight: 500;
+    font-size: 1.4em;
+  }
+}
