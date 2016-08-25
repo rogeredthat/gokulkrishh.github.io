@@ -1,18 +1,22 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="theme-color" content="#FA4B3E">
-  <meta name="msapplication-TileColor" content="#FA4B3E">
-  <meta name="msapplication-TileImage" content="{{ "/images/icons/G-Logo-144.png" | prepend: site.baseurl }}">
-  <link rel=icon sizes="192x192" href="{{ "/images/icons/G-Logo-192.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" href="{{ "/images/icons/G-Logo-192.png" | prepend: site.baseurl }}">
+  <meta name="theme-color" content="#d7b354">
+  <meta name="msapplication-TileColor" content="#d7b354">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title | escape }}">
+  <meta name="application-name" content="{{ site.title | escape }}">
+  <meta name="msapplication-TileImage" content="{{ "/images/icons/mstile-150x150.png" | prepend: site.baseurl }}">
+  <link rel=icon sizes="192x192" href="{{ "/images/icons/android-chrome-192x192.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" href="{{ "/images/icons/apple-touch-icon.png" | prepend: site.baseurl }}">
   <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl }}">
   <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/807f754269.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,700">
 </head>

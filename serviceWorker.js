@@ -2,7 +2,7 @@
 //Cache polyfil to support cacheAPI in all browsers
 importScripts("./demo/sw/cache-polyfill.js");
 
-var staticCache = "initial-site-v2";
+var staticCache = "initial-site-v1";
 
 //My Cache names
 var myCaches = [staticCache];
@@ -12,12 +12,12 @@ var files = [
   "/",
   "/index.html",
   "/css/main.css",
-  "/css/syntax.css",
+  'https://use.fontawesome.com/807f754269.css',
   "/js/main.js",
   "/images/avatar.jpg",
-  "/images/icons/G-Logo-192.png",
-  "/images/icons/G-Logo-144.png",
-  "https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,700"
+  "/images/icons/android-chrome-192x192.png",
+  "/images/icons/android-chrome-512x512.png",
+  "/manifest.json"
 ];
 
 //Adding install event listener
