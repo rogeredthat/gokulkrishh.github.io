@@ -103,6 +103,12 @@ header h1 {
   color: #E91E63;
 }
 
+.page-not-found {
+	margin: 50px auto;
+	text-align: center;
+	font-size: 30px;
+}
+
 .page-content {
   min-height: 200px;
   margin: 20px auto 20px;
