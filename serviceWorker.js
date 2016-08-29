@@ -34,6 +34,7 @@ self.addEventListener("install", function (event) {
       }))
       .then(function () {
         console.log("All the files are cached.");
+        return self.skipWaiting();
       })
       .catch(function (error) {
         console.error("Failed to cache the files.", error);
@@ -72,18 +73,5 @@ self.addEventListener("fetch", function (event) {
 //Activate event to delete old caches
 self.addEventListener("activate", function (event) {
   console.log("Event: Activate");
-
-  var cacheWhitelist = ['initial-cache-v1', 'initial-site-v1'];
-
-  //Delete unwanted caches
-  event.waitUntil(
-    caches.keys()
-      .then(function (allCaches) {
-        allCaches.map(function (cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        });
-      })
-  );
+  return self.clients.claim();
 });
