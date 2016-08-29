@@ -119,7 +119,13 @@ header h1 {
 
 .page-content i {
   color: #000;
-  padding-right: 5px;
+	padding-right: 8px;
+	transition: 200ms all ease-in;
+	vertical-align: bottom;
+}
+
+.page-content i:hover {
+  transform: scale(1.3);
 }
 
 .page-content i::before {
