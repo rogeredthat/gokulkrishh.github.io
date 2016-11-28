@@ -108,16 +108,20 @@ a:hover {
 	color: #E91E63;
 }
 
+b {
+  font-weight: 500;
+}
+
 .tag {
   color: #808080;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.6em;
 	margin-bottom: 15px;
 }
 
 .tag span {
   color: #E91E63;
-  font-size: 22px;
+  font-size: 1.1em;
 }
 
 .page-not-found {
@@ -128,7 +132,7 @@ a:hover {
 
 .page-content {
   min-height: 200px;
-  margin: 30px auto 20px;
+  margin: 50px auto 20px;
   max-width: 480px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.15);
   padding-bottom: 20px;
@@ -191,6 +195,24 @@ footer {
   color: #808080;
   font-size: 13px;
   margin-bottom: 20px;
+}
+
+h3::after {
+  height: 1px;
+  width: 10%;
+  content: '';
+  display: block;
+  background-color: rgba(0,0,0,.5);
+  margin-top: 15px;
+}
+
+.page-content h3 + p {
+  margin-top: 20px;
+}
+
+.page-content i {
+  display: block;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {
