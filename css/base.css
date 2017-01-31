@@ -27,8 +27,8 @@ body::-webkit-scrollbar {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  outline: 1px solid #fff;
+  background-color: #ddd;
+  outline: 1px solid #ddd;
   border-radius: 3px;
 }
 
@@ -113,7 +113,7 @@ footer i span {
 
 .page__content {
   min-height: 500px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .page__content > h3 {
