@@ -23,7 +23,7 @@ end
 
 
 {% highlight javascript %}
-var foo = "Hello World";
+var foo = "Hello World";var foo = "Hello World";var foo = "Hello World";var foo = "Hello World";var foo = "Hello World";var foo = "Hello World";var foo = "Hello World";
 alert(foo);
 console.log(foo);
 {% endhighlight %}

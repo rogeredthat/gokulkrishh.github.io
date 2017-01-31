@@ -11,6 +11,12 @@ tt, code, kbd, samp {
   color: #fff;
   padding: 10px;
 	position: relative;
+  overflow-x: scroll;
+}
+
+/*.highlight code {
+  margin-top: 20px;
+  display: inline-block;
 }
 
 .highlight code::after {
@@ -29,3 +35,4 @@ tt, code, kbd, samp {
   font-weight: 600;
   font-style: italic;
 }
+*/

@@ -37,6 +37,7 @@ a {
 	border-bottom: 1px solid #ccc;
 	text-decoration: none;
 	transition: all 200ms cubic-bezier(.17,.67,.83,.67);
+  line-height: 1.8;
 }
 
 a:hover {
@@ -71,6 +72,10 @@ h1 {
 .title__tag span,
 footer i span {
   font-style: normal;
+}
+
+footer {
+  margin-bottom: 20px;
 }
 
 .social a {
