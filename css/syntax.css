@@ -1,0 +1,31 @@
+figure {
+	margin: 0;
+}
+
+tt, code, kbd, samp {
+	font-family: "Consolas", "monospace";
+}
+
+.highlight pre {
+  background: #212121;
+  color: #fff;
+  padding: 10px;
+	position: relative;
+}
+
+.highlight code::after {
+  content: attr(data-lang);
+  position: absolute;
+  right: 1px;
+  background: #fff;
+  min-width: 50px;
+  height: 5px;
+  color: #212121;
+  padding: 9px;
+  top: 1px;
+  text-align: center;
+  line-height: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+}

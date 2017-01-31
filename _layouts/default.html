@@ -2,30 +2,20 @@
 <html>
   {% include head.html %}
   <body>
-
     {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        <h3>About</h3>
-        <ul>
-          <li>I current work as a <b>UI Developer</b> at Ephicacy Lifescience Analytics in India, Bangalore.</li>
-
-          <li><a href="https://developers.google.com/experts/people/gokulakrishnan-kalaikovan.html" target="_blank">Google Developer Expert</a> for Web Technologies.</li>
-          
-          <li>An open source contributor.</li>
-
-          <li>My recent talk's on <a href="https://github.com/code-kotis/pwa-codelabs" target="_blank">PWA Codelabs</a> at Google DevFest 2016 in Bangalore, <a href="https://docs.google.com/presentation/d/1COtqAkSMDiz6avZ-_olqFR66ooLVpHE9folNQCji7r0/edit#slide=id.ge9090756a_1_78" target="_blank">Progressive Web Application</a>, <a href="https://docs.google.com/presentation/d/1lBTU4_haLt6MT68F-Aw-kRkkaSMaFCS7KlgYmYCEQsE/edit?usp=sharing" target="_blank">Angular 2</a>.</li>
-
-          <li>My recent work & open source's are <a title="Progressive Web Application" href="https://github.com/gokulkrishh/nearby-atms" target="_blank">Near by ATM's</a>, <a title="Progressive Web Application" href="https://github.com/gokulkrishh/demo-progressive-web-app" target="_blank">Demo PWA </a>,<a title="Progressive Web Application" href="https://github.com/code-kotis/barcode-scanner" target="_blank">QR Code Scan</a> etc,. <p>(checkout my <a href="https://github.com/gokulkrishh" target="_blank" rel="noopener">github</a> for more)</p></li>
-
-        </ul>
-      </div>
+    <div class="wrapper">
+	    <div class="page__content">
+	    	<h3>Posts</h3>
+	    	<ul>
+				  {% for post in site.posts %}
+				    <li>
+				      {{post.date | date: '%B %d, %Y'}} - <a href="{{ post.url }}">{{ post.title }}</a>
+				    </li>
+				  {% endfor %}
+				</ul>
+	    </div>
     </div>
-
     {% include footer.html %}
-
-    <!-- Service Worker -->
     <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

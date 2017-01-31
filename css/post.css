@@ -1,0 +1,30 @@
+.post__content {
+  background: #fff;
+  color: #212121;
+  padding: 15px;
+  word-break: break-word;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  min-height: 1640px;
+}
+
+.post__content ::selection {
+  background: #212121;
+  color: #fff;
+}
+
+.post__content ::-moz-selection {
+  background: #212121;
+  color: #fff;
+}
+
+.highlight ::selection {
+	background: #fff;
+  color: #212121;
+}
+
+.highlight ::-moz-selection {
+	background: #fff;
+  color: #212121;
+}
+

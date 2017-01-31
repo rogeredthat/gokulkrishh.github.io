@@ -16,3 +16,6 @@ github_username:  gokulkrishh
 
 # Build settings
 markdown: kramdown
+
+# Server Config options
+livereload: true # You no longer need to include --livereload
