@@ -9,7 +9,7 @@
   justify-content: flex-end;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 1;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.32);
 }
 
@@ -63,35 +63,13 @@
   font-weight: 500;
 }
 
-.post__content h1 svg + a,
-.post__content h2 svg + a,
-.post__content h3 svg + a,
-.post__content h4 svg + a,
-.post__content h5 svg + a {
-  border-bottom: 0;
-}
-
-.post__content h1 svg,
-.post__content h2 svg,
-.post__content h3 svg,
-.post__content h4 svg,
-.post__content h5 svg {
-  visibility: hidden;
-  margin-left: -10px;
-  transition: visibility 200ms linear;
-}
-
-.post__content h1:hover > svg,
-.post__content h2:hover > svg,
-.post__content h3:hover > svg,
-.post__content h4:hover > svg,
-.post__content h5:hover > svg {
-  visibility: visible;
-}
-
 .post__content a {
   color: #212121;
   border-color: #ccc;
+}
+
+.post__content a:focus {
+  outline: thin dotted;
 }
 
 .post__content ol li {
@@ -100,4 +78,100 @@
 
 .post__content p {
   font-size: 15px;
+  line-height: 1.6;
+}
+
+[class*="language-"] {
+  position: relative;
+}
+
+[class*="language-"]::after {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  min-width: 10px;
+  height: 20px;
+  line-height: 18px;
+  background: #fff;
+  color: #212121;
+  display: block;
+  font-size: 12px;
+  font-family: "Roboto Mono", sans-serif;
+  padding-left: 3px;
+  padding-right: 3px;
+  /*display: none;*/
+  font-weight: 500;
+}
+
+[class*="language-"]:hover::after {
+  /*display: block;*/
+}
+
+.language-js::after {
+  content: "javascript";
+}
+
+.language-bash::after {
+  content: "bash";
+}
+
+.language-html::after {
+  content: "html";
+}
+
+.language-css::after {
+  content: "css";
+}
+
+.post__content b {
+  font-weight: 500;
+}
+
+
+.post__content img {
+  cursor: zoom-in;
+}
+
+.zoom__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  cursor: zoom-out;
+  user-select: none;
+  z-index: 2;
+}
+
+.zoom__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.zoom__element {
+  position: fixed;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.zoom__element img {
+  display: block;
+  margin: 0 auto;
+}
+
+time {
+  font-family: "Roboto mono", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: inline-block;
 }

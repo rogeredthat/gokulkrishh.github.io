@@ -100,7 +100,7 @@ code.highlighter-rouge {
 .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
-.gp { color: #f00; } 
+.gp { color: #f00; user-select: none; } 
 
 .highlight code {
   color: #e6db74;

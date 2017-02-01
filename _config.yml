@@ -13,6 +13,7 @@ baseurl: ""
 url: "https://gokulkrishh.github.io" # the base hostname & protocol for your site
 twitter_username: gokul_i
 github_username:  gokulkrishh
+disqus_shortname:  gokulkrishh
 
 # Build settings
 markdown: kramdown

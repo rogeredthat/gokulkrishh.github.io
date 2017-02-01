@@ -23,8 +23,10 @@
     </div>
 
     {% include footer.html %}
-
-    <!-- Service Worker -->
+    <div class="zoom__container">
+      <div class="zoom__overlay"></div>
+      <div class="zoom__element"></div>
+    </div> 
     <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

@@ -57,6 +57,10 @@ h1, h3 {
 	text-align: left;
 }
 
+ul li {
+  margin-bottom: 10px;
+}
+
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
