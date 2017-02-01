@@ -12,66 +12,85 @@ var files = [
   "/",
   "/index.html",
   "/css/main.css",
-  "https://use.fontawesome.com/807f754269.css",
-  "https://use.fontawesome.com/releases/v4.6.3/css/font-awesome-css.min.css",
   "/js/main.js",
-  "/images/avatar.jpg",
   "/images/icons/android-chrome-192x192.png",
   "/images/icons/android-chrome-512x512.png",
   "/manifest.json"
 ];
 
-//Adding install event listener
-self.addEventListener("install", function (event) {
-  console.log("Event: Install");
+//Adding `install` event listener
+self.addEventListener('install', (event) => {
+  console.info('Event: Install');
 
   event.waitUntil(
-    caches.open(staticCache)
-    .then(function (cache) {
-      //[] of files to cache & any of the file not present compelete `addAll` will fail
-      return cache.addAll(files.map(function (fileUrl) {
-        return new Request(fileUrl);
-      }))
-      .then(function () {
-        console.log("All the files are cached.");
-        return self.skipWaiting();
+    caches.open(cacheName)
+    .then((cache) => {
+      //[] of files to cache & if any of the file not present `addAll` will fail
+      return cache.addAll(files)
+      .then(() => {
+        console.info('All files are cached');
+        return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
       })
-      .catch(function (error) {
-        console.error("Failed to cache the files.", error);
+      .catch((error) =>  {
+        console.error('Failed to cache', error);
       })
     })
   );
 });
 
 /*
-  FETCH EVENT:
-    Will be triggered for every request made by index page, After install.
+  FETCH EVENT: triggered for every request made by index page, after install.
 */
 
-//Fetch event to fetch stored caches
-self.addEventListener("fetch", function (event) {
-  console.log("Event: Fetch");
+//Adding `fetch` event listener
+self.addEventListener('fetch', (event) => {
+  console.info('Event: Fetch');
 
-  //To tell browser to evaluate the result of event
+  var request = event.request;
+
+  //Tell the browser to wait for newtwork request and respond with below
   event.respondWith(
-    caches.match(event.request) //To match current request with cached request, return it
-      .then(function(response) {
-        //If response found return it else fetch again.
-        return response || fetch(event.request);
-      })
-      .catch(function(error) {
-        console.error("Error: ", error);
-      })
+    //If request is already in cache, return it
+    caches.match(request).then((response) => {
+      if (response) {
+        return response;
+      }
+
+      //if request is not cached, add it to cache
+      return fetch(request).then((response) => {
+        var responseToCache = response.clone();
+        caches.open(cacheName).then((cache) => {
+            cache.put(request, responseToCache).catch((err) => {
+              console.warn(request.url + ': ' + err.message);
+            });
+          });
+
+        return response;
+      });
+    })
   );
 });
 
 /*
-  ACTIVATE EVENT:
-    Will be triggered once after registering, also used to clean up caches
+  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
 */
 
-//Activate event to delete old caches
-self.addEventListener("activate", function (event) {
-  console.log("Event: Activate");
+//Adding `activate` event listener
+self.addEventListener('activate', (event) => {
+  console.info('Event: Activate');
+
+  //Remove old and unwanted caches
+  event.waitUntil( 
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          if (cache !== cacheName) {     //cacheName = 'cache-v1'
+            return caches.delete(cache); //Deleting the cache
+          }
+        })
+      );
+    })
+  );
+
   return self.clients.claim();
 });

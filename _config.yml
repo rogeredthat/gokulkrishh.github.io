@@ -13,9 +13,11 @@ baseurl: ""
 url: "https://gokulkrishh.github.io" # the base hostname & protocol for your site
 twitter_username: gokul_i
 github_username:  gokulkrishh
+disqus_shortname:  gokulkrishh
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 # Server Config options
 livereload: true # You no longer need to include --livereload

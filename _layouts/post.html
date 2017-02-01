@@ -3,11 +3,51 @@
   {% include head.html %}
   <body>
     <div class="wrapper">
+      <header class="post__header">
+        <a href="/">Home</a> |
+        <a href="/about">About</a>
+      </header> 
     	<div class="post__content">
-    		{{content}}
+      {% if page.date %}
+        <span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: '%B %d, %Y' }}
+            {% if site.disqus_shortname %}
+                <!-- &middot; -->
+                <!-- <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}"></a> -->
+                {% if page.update_date %}
+                    &middot;
+                    Updated {{ page.update_date | date: site.date_format }}
+                {% endif %}
+            {% endif %}
+          </time>
+        </span>
+      {% endif %}
+  		{{content}}
     	</div>
     </div>
-    {% include footer.html %}
+    <div class="zoom__container">
+      <div class="zoom__overlay"></div>
+      <div class="zoom__element"></div>
+    </div>
+
+    {% if page.comments %}
+      <div class="wrapper">  
+        <div id="disqus_thread"></div>
+      </div>
+      <script>
+        (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');  
+          s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    {% endif %}
     <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+    <br/>
+    <br/>
+    {% include footer.html %}
   </body>
 </html>

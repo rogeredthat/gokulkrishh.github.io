@@ -1,6 +1,6 @@
 {
   "name": "Gokulakrishnan Kalaikovan",
-  "short_name": "gokul",
+  "short_name": "Gokul",
   "icons": [
 		{
 			"src": "images/icons/android-chrome-192x192.png",
@@ -17,5 +17,5 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "#d7b354"
+  "theme_color": "#212121"
 }

@@ -1,11 +1,37 @@
+.post__header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #212121;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.32);
+}
+
+.post__header a:first-child {
+  margin-right: 10px;
+}
+
+.post__header a:last-child {
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
 .post__content {
   background: #fff;
   color: #212121;
   padding: 15px;
   word-break: break-word;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-top: 70px;
+  margin-bottom: 20px;
   min-height: 1640px;
+  overflow-x: hidden;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 .post__content ::selection {
@@ -28,3 +54,124 @@
   color: #212121;
 }
 
+.post__content h1 {
+  margin-top: 10px;
+}
+
+.post__content h4,
+.post__content h3 {
+  font-weight: 500;
+}
+
+.post__content a {
+  color: #212121;
+  border-color: #ccc;
+}
+
+.post__content a:focus {
+  outline: thin dotted;
+}
+
+.post__content ol li {
+  line-height: 35px;
+}
+
+.post__content p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+[class*="language-"] {
+  position: relative;
+}
+
+[class*="language-"]::after {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  min-width: 10px;
+  height: 20px;
+  line-height: 18px;
+  background: #fff;
+  color: #212121;
+  display: block;
+  font-size: 12px;
+  font-family: "Roboto Mono", sans-serif;
+  padding-left: 3px;
+  padding-right: 3px;
+  /*display: none;*/
+  font-weight: 500;
+}
+
+[class*="language-"]:hover::after {
+  /*display: block;*/
+}
+
+.language-js::after {
+  content: "javascript";
+}
+
+.language-bash::after {
+  content: "bash";
+}
+
+.language-html::after {
+  content: "html";
+}
+
+.language-css::after {
+  content: "css";
+}
+
+.post__content b {
+  font-weight: 500;
+}
+
+
+.post__content img {
+  cursor: zoom-in;
+}
+
+.zoom__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  cursor: zoom-out;
+  user-select: none;
+  z-index: 2;
+}
+
+.zoom__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.zoom__element {
+  position: fixed;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.zoom__element img {
+  display: block;
+  margin: 0 auto;
+}
+
+time {
+  font-family: "Roboto mono", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: inline-block;
+}
