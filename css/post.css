@@ -1,11 +1,37 @@
+.post__header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #212121;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.32);
+}
+
+.post__header a:first-child {
+  margin-right: 10px;
+}
+
+.post__header a:last-child {
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
 .post__content {
   background: #fff;
   color: #212121;
   padding: 15px;
   word-break: break-word;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-top: 70px;
+  margin-bottom: 20px;
   min-height: 1640px;
+  overflow-x: hidden;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 .post__content ::selection {
@@ -28,3 +54,50 @@
   color: #212121;
 }
 
+.post__content h1 {
+  margin-top: 10px;
+}
+
+.post__content h4,
+.post__content h3 {
+  font-weight: 500;
+}
+
+.post__content h1 svg + a,
+.post__content h2 svg + a,
+.post__content h3 svg + a,
+.post__content h4 svg + a,
+.post__content h5 svg + a {
+  border-bottom: 0;
+}
+
+.post__content h1 svg,
+.post__content h2 svg,
+.post__content h3 svg,
+.post__content h4 svg,
+.post__content h5 svg {
+  visibility: hidden;
+  margin-left: -10px;
+  transition: visibility 200ms linear;
+}
+
+.post__content h1:hover > svg,
+.post__content h2:hover > svg,
+.post__content h3:hover > svg,
+.post__content h4:hover > svg,
+.post__content h5:hover > svg {
+  visibility: visible;
+}
+
+.post__content a {
+  color: #212121;
+  border-color: #ccc;
+}
+
+.post__content ol li {
+  line-height: 35px;
+}
+
+.post__content p {
+  font-size: 15px;
+}
