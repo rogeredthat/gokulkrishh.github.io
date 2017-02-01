@@ -25,7 +25,7 @@
 .post__content {
   background: #fff;
   color: #212121;
-  padding: 15px;
+  padding: 20px;
   word-break: break-word;
   margin-top: 70px;
   margin-bottom: 20px;
@@ -81,52 +81,9 @@
   line-height: 1.6;
 }
 
-[class*="language-"] {
-  position: relative;
-}
-
-[class*="language-"]::after {
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  min-width: 10px;
-  height: 20px;
-  line-height: 18px;
-  background: #fff;
-  color: #212121;
-  display: block;
-  font-size: 12px;
-  font-family: "Roboto Mono", sans-serif;
-  padding-left: 3px;
-  padding-right: 3px;
-  /*display: none;*/
-  font-weight: 500;
-}
-
-[class*="language-"]:hover::after {
-  /*display: block;*/
-}
-
-.language-js::after {
-  content: "javascript";
-}
-
-.language-bash::after {
-  content: "bash";
-}
-
-.language-html::after {
-  content: "html";
-}
-
-.language-css::after {
-  content: "css";
-}
-
 .post__content b {
   font-weight: 500;
 }
-
 
 .post__content img {
   cursor: zoom-in;
