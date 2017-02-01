@@ -12,10 +12,7 @@ var files = [
   "/",
   "/index.html",
   "/css/main.css",
-  "https://use.fontawesome.com/807f754269.css",
-  "https://use.fontawesome.com/releases/v4.6.3/css/font-awesome-css.min.css",
   "/js/main.js",
-  "/images/avatar.jpg",
   "/images/icons/android-chrome-192x192.png",
   "/images/icons/android-chrome-512x512.png",
   "/manifest.json"
