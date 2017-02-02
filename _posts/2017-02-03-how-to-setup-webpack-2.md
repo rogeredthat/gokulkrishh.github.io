@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "How to setup webpack 2"
+description: How to setup webpack 2
 date:   2017-02-1
 categories: webpack
 comments: true
 read_time: 15
+image: /images/webpack/webpack.png
 ---
 
 # How To Setup Webpack 2

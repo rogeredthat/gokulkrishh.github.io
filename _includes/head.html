@@ -2,8 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% seo %}
   <meta name="theme-color" content="#212121">
   <meta name="msapplication-TileColor" content="#212121">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,6 +10,7 @@
   <meta name="apple-mobile-web-app-title" content="{{ site.title | escape }}">
   <meta name="application-name" content="{{ site.title | escape }}">
   <meta name="msapplication-TileImage" content="{{ "/images/icons/mstile-150x150.png" | prepend: site.baseurl }}">
+  <meta name="google-site-verification" content="tWzbp4_ZxYPdhc-YtdGItiKH3-Ui3qptrbQ53xXCyUQ" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel=icon sizes="192x192" href="{{ "/images/icons/android-chrome-192x192.png" | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" href="{{ "/images/icons/apple-touch-icon.png" | prepend: site.baseurl }}">

@@ -7,8 +7,10 @@
 
 # Site settings
 title: Hello | Gokulakrishnan
+author: Gokulakrishnan Kalaikovan
 email: krishnangokul9@gmail.com
-description: 
+description: I ♥ Web / UI Developer / Google Developer Expert at @google
+logo: /images/icons/android-chrome-512x512.png
 baseurl: ""
 url: "https://gokulkrishh.github.io" # the base hostname & protocol for your site
 twitter_username: gokul_i
@@ -21,3 +23,19 @@ highlighter: rouge
 
 # Server Config options
 livereload: true # You no longer need to include --livereload
+
+gems:
+  - jekyll-seo-tag
+twitter:
+  username: gokul_i
+
+social:
+  name: Gokulakrishnan Kalaikovan
+  links:
+    - https://twitter.com/gokul_i
+    - https://www.facebook.com/gokulkrishh
+    - https://www.linkedin.com/in/gokulkrishh
+    - https://plus.google.com/+GokulKalaikovan
+    - https://plus.google.com/+GokulKalaikoven
+
+google_site_verification: tWzbp4_ZxYPdhc-YtdGItiKH3-Ui3qptrbQ53xXCyUQ
