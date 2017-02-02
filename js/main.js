@@ -12,15 +12,18 @@ if ("serviceWorker" in navigator && window.location.hostname !== "localhost") {
 }
 
 // Zoom events for images in posts
-var imageElement = document.querySelectorAll(".post__content img");
+
+var postContentElement = document.querySelector(".post__content");
+var imageElement = postContentElement && postContentElement.querySelectorAll(".post__content img");
 var zoomContainerElement = document.querySelector(".zoom__container");
 var zoomImageElement = zoomContainerElement.querySelector(".zoom__element");
 
-imageElement.forEach(function(image) {
+imageElement && imageElement.forEach(function(image) {
   image.addEventListener("click", function (event) {
     var cloneImage = event.target.cloneNode();
     zoomContainerElement.style.display = "block";
     zoomImageElement.appendChild(cloneImage);
+    postContentElement.classList.add("blur--bg");
     document.body.style.overflow = "hidden";
   });
 });
@@ -28,5 +31,6 @@ imageElement.forEach(function(image) {
 zoomContainerElement.addEventListener("click", function (event) {
   zoomContainerElement.style.display = "none";
   zoomImageElement.innerHTML = "";
+  postContentElement.classList.remove("blur--bg");
   document.body.style.overflow = "auto";
 });

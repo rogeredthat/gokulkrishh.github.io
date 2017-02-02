@@ -1,6 +1,6 @@
 .post__header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   background: #212121;
   height: 56px;
@@ -112,18 +112,14 @@
   bottom: 0;
 }
 
-.zoom__element {
+.zoom__element,
+.zoom__element img {
   position: fixed;
   top: 5%;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-}
-
-.zoom__element img {
-  display: block;
-  margin: 0 auto;
 }
 
 time {
@@ -136,4 +132,37 @@ time {
 
 .post__content li {
   line-height: 22px;
+}
+
+.blur--bg {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+
+@media all and (max-width: 480px) {
+  body.posts {
+    margin: 0;
+  }
+  
+  .posts .post__content {
+    padding: 10px;
+  }
+
+  .posts .wrapper {
+    padding: 0;
+  }
+
+  .wrapper {
+    font-size: 17px;
+  }
+
+  #disqus_thread {
+    padding: 10px;
+  }
+
+  .posts footer i {
+    text-align: center;
+    display: block;
+  }
 }

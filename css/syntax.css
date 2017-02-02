@@ -4,7 +4,7 @@ figure {
 
 tt, code, kbd, samp {
 	font-family: "Monaco", "Consolas", monospace;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .highlighter-rouge pre {
@@ -109,7 +109,6 @@ code.highlighter-rouge {
   color: #e6db74;
 }
 
-
 [class*="language-"] {
   position: relative;
   margin-top: 40px;
@@ -131,6 +130,7 @@ code.highlighter-rouge {
   padding-left: 3px;
   padding-right: 10px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 [class*="language-"]::before {
@@ -151,6 +151,7 @@ code.highlighter-rouge {
   top: -20px;
   padding-left: 10px;
   font-weight: 500;
+  text-transform: uppercase;  
 }
 
 [class*="language-"]:hover::after {
@@ -175,4 +176,11 @@ code.highlighter-rouge {
 
 .language-json::after {
   content: "package.json";
+}
+
+
+@media all and (max-width: 480px) {
+  [class*="language-"] {
+    width: 100%;
+  }
 }

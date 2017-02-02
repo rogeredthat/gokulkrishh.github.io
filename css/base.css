@@ -88,6 +88,10 @@ footer {
   margin-bottom: 20px;
 }
 
+footer i span {
+  color: red;
+}
+
 header {
   margin-bottom: 30px;
 }
@@ -148,3 +152,10 @@ header a.active {
   font-size: 18px;
   margin-top: 40px;
 }
+
+@media all and (max-width: 480px) {
+  .talks {
+    margin-bottom: 30px;
+  }
+}
+
