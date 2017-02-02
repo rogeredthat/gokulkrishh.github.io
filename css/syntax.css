@@ -3,7 +3,8 @@ figure {
 }
 
 tt, code, kbd, samp {
-	font-family: "Consolas", "monospace";
+	font-family: "Monaco", "Consolas", monospace;
+  font-size: 13px;
 }
 
 .highlighter-rouge pre {
@@ -128,8 +129,7 @@ code.highlighter-rouge {
   font-size: 12px;
   font-family: "Roboto Mono", sans-serif;
   padding-left: 3px;
-  padding-right: 3px;
-  /*display: none;*/
+  padding-right: 10px;
   font-weight: 500;
 }
 

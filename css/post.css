@@ -133,3 +133,7 @@ time {
   margin-bottom: 5px;
   display: inline-block;
 }
+
+.post__content li {
+  line-height: 22px;
+}

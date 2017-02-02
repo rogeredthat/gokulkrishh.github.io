@@ -1,0 +1,20 @@
+{
+  "name": "gokulkrishh.github.io",
+  "version": "1.0.0",
+  "description": "Source code for my blog (Jekyll 3.0)",
+  "main": "\"\"",
+  "scripts": {
+    "server": "jekyll server --host=0.0.0.0 --drafts",
+    "build": "jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokulkrishh/gokulkrishh.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gokulkrishh/gokulkrishh.github.io/issues"
+  },
+  "homepage": "https://github.com/gokulkrishh/gokulkrishh.github.io#readme"
+}
