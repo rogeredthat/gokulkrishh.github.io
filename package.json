@@ -4,7 +4,8 @@
   "description": "Source code for my blog (Jekyll 3.0)",
   "main": "\"\"",
   "scripts": {
-    "server": "jekyll server --host=0.0.0.0 --drafts",
+    "draft": "jekyll server --host=0.0.0.0 --drafts",
+    "server": "jekyll server --host=0.0.0.0",
     "build": "jekyll build"
   },
   "repository": {
