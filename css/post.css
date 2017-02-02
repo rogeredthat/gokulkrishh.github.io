@@ -66,6 +66,7 @@
 .post__content a {
   color: #212121;
   border-color: #ccc;
+  font-weight: 500;
 }
 
 .post__content a:focus {

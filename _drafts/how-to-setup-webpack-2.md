@@ -14,19 +14,18 @@ comments: true
 - Reduces `HTTP` request by bundling all static assets into a single file.
 - `Hot reloading` helps us to forget about the good old `gulp` and `grunt` watchers. 
 
-### Steps
-1. [Create folder](#step-1---create-folder)
+## Steps
+
+1. [Create folder](#step-1---create-a-folder)
 1. [Install webpack](#step-2---install-webpack)
 1. [Creating webpack config](#step-3---creating-webpack-config)
-1. [Run the webpack](#step-4---run-the-webpack)
-1. [Setup webpack development server](#step-5---setup-webpack-development-server)
+1. [Run webpack](#step-4---run-webpack)
+1. [Webpack development server](#step-5---webpack-development-server)
 1. [Run development server](#step-6---run-development-server)
-1. [Setup development & production env](#step-7---setup-dev--prod-environment)
+1. [Development & production env](#step-7---dev--prod-environment)
 1. [Sourcemap for development & production](#step-8---sourcemap-for-dev--prod)
 
-#### Setup & Installation
-
-#### Step 1 - Create a folder
+### Step 1 - Create a folder
 
 Create a folder called ```webpack-2-setup``` and cd into it.
 
@@ -34,7 +33,7 @@ Create a folder called ```webpack-2-setup``` and cd into it.
 $ mkdir webpack-2-setup && cd webpack-2-setup
 ```
 
-#### Step 2 - Install webpack latest (v2)
+### Step 2 - Install webpack
 
 ```bash
 $ npm install --dev-save webpack@latest webpack-dev-server@latest
@@ -46,7 +45,7 @@ or do it via [Yarn](https://yarnpkg.com/)
 $ yarn add --dev webpack@latest webpack-dev-server@latest
 ```
 
-#### Step 3 - Creating webpack config
+### Step 3 - Creating webpack config
 
 Create a ```webpack.config.js``` file in the root of our directory and let's write some configuration.
 
@@ -86,9 +85,9 @@ var other = _.concat(array, 2, [3], [[4]]);
 alert(other); // [1, 2, 3, [4]]
 ```
 
-#### Step 4 - Run the webpack
+### Step 4 - Run webpack
 
-To run the webpack `development mode`, type the following in your terminal.
+To run webpack in `development mode`, type the following in your terminal.
 
 ```bash
 $ webpack
@@ -115,7 +114,7 @@ $ webpack -p
 
 <b>Bundle Size:</b> 72.3KB
 
-#### Step 5 - Setup webpack development server
+### Step 5 - Setup webpack development server
 
 Webpack has its own development server. Let's setup that in ```webpack.config.js``` by adding the following.
 
@@ -142,7 +141,7 @@ And add the script ```bundle.js``` file in ```src/index.html``` like below.
 </html>
 ```
 
-#### Step 6 - Run development server
+### Step 6 - Run development server
 
 Type the following.
 
@@ -156,18 +155,19 @@ That's all, basic webpack config is done.
 
 But what about pre-processor like ```SASS```,  ```Images``` and ```ES6``` support? How to setup that? Let us see.
 
-### Loaders
+## Loaders
 
-Let's set up ```ES6 + Babel``` using a webpack loader.
+We are going to set up ```ES6 + Babel``` using a webpack babel loader.
 
-#### Step 1 - Install babel loader, core & ES6 preset.
+### Step 1 - Install babel loader, core & ES6 preset.
 
 ```bash
 $ yarn add --dev babel-loader babel-core babel-preset-es2015
 ```
-After installation, We have to add loader configurations to ```webpack.config.js``` file.
 
-#### Step 2 - ES6 Loader
+Now we have to add loader configurations to ```webpack.config.js``` file.
+
+### Step 2 - ES6 loader
 
 ```js
 module: {
@@ -183,7 +183,7 @@ module: {
 }
 ```
 
-Now, `ES6` syntax is supported, let us check by changing ```app.js``` to ES6 syntax.
+Now, `ES6` syntax is supported, let us check by changing ```app.js``` to ES6.
 
 ```js
 // importing lodash module
@@ -201,15 +201,13 @@ Again run the development server and check.
 $ webpack-dev-server
 ```
 
-#### Step 3 - SASS & CSS Loader
-
-Install SASS & CSS Loader
+### Step 3 - Install SASS & CSS loader
 
 ```bash
 $ yarn add --dev css-loader style-loader sass-loader node-sass
 ```
 
-SASS & CSS loader config is below.
+SASS & CSS loader configuration is below.
 
 ```js
 module: {
@@ -224,9 +222,9 @@ module: {
 }
 ```
 
-After `loaders`, final steps are setting `environment` and `sourcemaps` for webpack.
+After `loader` setup, final steps are setting `environment` and `sourcemaps` for webpack.
 
-#### Step 7 - Setup Dev & Prod Environment
+### Step 7 - Development & Production environment
 
 In `package.json` file, let's add scripts to run our dev server and production.
 
@@ -239,7 +237,7 @@ In `package.json` file, let's add scripts to run our dev server and production.
 
 `NODE_ENV=production` is environment setup for the build.
 
-#### Step 8 - Sourcemap for Dev & Prod
+### Step 8 - Sourcemap for development & production
 
 Now we know when we are running for production or development. Let us use it to set up the sourcemap accordingly.
 
@@ -256,11 +254,11 @@ if (process.env.NODE_ENV === "production") {
 module.exports = config;
 ```
 
-More information on [sourcemaps](http://erikaybar.name/webpack-source-maps-in-chrome/?utm_source=javascriptweekly&utm_medium=email)
+More information on [sourcemaps](http://erikaybar.name/webpack-source-maps-in-chrome/?utm_source=javascriptweekly&utm_medium=email).
 
-#### Final
+## Final
 
-Final step contains all the config for webpack from above.
+Below contains all the config for webpack from above steps.
 
 ```js
 var webpack = require('webpack');

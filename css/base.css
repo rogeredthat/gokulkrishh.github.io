@@ -44,12 +44,11 @@ a {
 	text-decoration: none;
 	transition: all 200ms cubic-bezier(.17,.67,.83,.67);
   line-height: 1.8;
+  padding-bottom: 1px;
 }
 
 a:hover {
 	font-weight: 500;
-	border-color: #fff;
-	padding-bottom: 1px;
 }
 
 h1, h3 {
