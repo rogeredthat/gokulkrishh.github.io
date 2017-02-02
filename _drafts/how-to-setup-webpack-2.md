@@ -8,6 +8,12 @@ comments: true
 
 # How To Setup Webpack 2
 
+[Webpack](https://webpack.js.org/) is module bundler for modern web applications. 
+
+- It is a highly configurable and easy to use. 
+- Reduces `HTTP` request by bundling all static assets into a single file.
+- `Hot reloading` helps us to forget about the good old `gulp` and `grunt` watchers. 
+
 ### Steps
 1. [Create folder](#step-1---create-folder)
 1. [Install webpack](#step-2---install-webpack)
@@ -28,7 +34,7 @@ Create a folder called ```webpack-2-setup``` and cd into it.
 $ mkdir webpack-2-setup && cd webpack-2-setup
 ```
 
-#### Step 2 - Install webpack latest
+#### Step 2 - Install webpack latest (v2)
 
 ```bash
 $ npm install --dev-save webpack@latest webpack-dev-server@latest
@@ -42,7 +48,7 @@ $ yarn add --dev webpack@latest webpack-dev-server@latest
 
 #### Step 3 - Creating webpack config
 
-Create a ```webpack.config.js``` file in root of our directory and let's write some configuration.
+Create a ```webpack.config.js``` file in the root of our directory and let's write some configuration.
 
 ```js
 var webpack = require('webpack');
@@ -111,7 +117,7 @@ $ webpack -p
 
 #### Step 5 - Setup webpack development server
 
-Webpack has its own development server. Lets setup that in ```webpack.config.js``` by adding the following.
+Webpack has its own development server. Let's setup that in ```webpack.config.js``` by adding the following.
 
 ```js
 var config = {
@@ -130,7 +136,7 @@ And add the script ```bundle.js``` file in ```src/index.html``` like below.
   <title>Webpack 2 Setup</title>
 </head>
 <body>
-	
+    
   <script src="/app.bundle.js"></script>
 </body>
 </html>
@@ -146,13 +152,13 @@ $ webpack-dev-server
 
 Open [http://localhost:8080/](http://localhost:8080/) in your browser. More [configuration details](https://webpack.js.org/configuration/dev-server/)
 
-Thats all, basic webpack config is done. 
+That's all, basic webpack config is done. 
 
-But what about pre-processor like ```SASS```,  ```Images``` and ```ES6``` support ? How to setup that ? Lets see.
+But what about pre-processor like ```SASS```,  ```Images``` and ```ES6``` support? How to setup that? Let us see.
 
 ### Loaders
 
-Lets set up ```ES6 + Babel``` using a webpack loader.
+Let's set up ```ES6 + Babel``` using a webpack loader.
 
 #### Step 1 - Install babel loader, core & ES6 preset.
 
@@ -177,7 +183,7 @@ module: {
 }
 ```
 
-Now `ES6` syntax is supported, lets check by changing ```app.js``` to ES6 syntax.
+Now, `ES6` syntax is supported, let us check by changing ```app.js``` to ES6 syntax.
 
 ```js
 // importing lodash module
@@ -222,7 +228,7 @@ After `loaders`, final steps are setting `environment` and `sourcemaps` for webp
 
 #### Step 7 - Setup Dev & Prod Environment
 
-In `package.json` file, lets add scripts to run our dev server and production.
+In `package.json` file, let's add scripts to run our dev server and production.
 
 ```json
 "scripts": {
@@ -231,11 +237,11 @@ In `package.json` file, lets add scripts to run our dev server and production.
 }
 ```
 
-`NODE_ENV=production` is environment set for build.
+`NODE_ENV=production` is environment setup for the build.
 
 #### Step 8 - Sourcemap for Dev & Prod
 
-Now we know when we are running for production or development. Lets use it to setup the sourcemap accordingly.
+Now we know when we are running for production or development. Let us use it to set up the sourcemap accordingly.
 
 ```js
 var config = {
@@ -309,10 +315,10 @@ if (process.env.NODE_ENV === "production") {
 module.exports = config;
 ```
 
-Thats all. Thanks for reading my article. 
+Thanks for reading my article.
 
 #### Articles References:
 
-- <a href="https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783#.3dou6bawv" target="_blank">Getting started with webpack 2</a>
+- <a href="https://blog.flennik.com/the-fine-art-of-the-webpack-2-config-dc4d19d7f172#" target="_blank">The Fine Art of the Webpack 2 Config</a>
+- <a href="https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling" target="_blank">A Beginners Guide to Webpack 2 and Module Bundling</a>
 - <a href="https://github.com/webpack/webpack/tree/master/examples" target="_blank">Webpack examples</a>
-- <a href="http://javascriptplayground.com/blog/2016/10/moving-to-webpack-2/" target="_blank">Moving to webpack 2</a>
