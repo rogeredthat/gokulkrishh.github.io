@@ -4,6 +4,7 @@ title:  "How to setup webpack 2"
 date:   2017-02-1
 categories: webpack
 comments: true
+read_time: 15
 ---
 
 # How To Setup Webpack 2
@@ -11,8 +12,8 @@ comments: true
 [Webpack](https://webpack.js.org/) is module bundler for modern web applications. 
 
 - It is a highly configurable and easy to use. 
-- Reduces `HTTP` request by bundling all static assets into a single file.
-- `Hot reloading` helps us to forget about the good old `gulp` and `grunt` watchers. 
+- Reduces the network request by bundling all static assets into a single file.
+- <a href="https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack" target="_blank">Hot Reloading</a> helps us to forget about the good old `gulp` and `grunt` watchers (we won't be talking about this). 
 
 ## Steps
 
@@ -39,7 +40,9 @@ $ mkdir webpack-2-setup && cd webpack-2-setup
 $ npm install --dev-save webpack@latest webpack-dev-server@latest
 ```
 
-or do it via [Yarn](https://yarnpkg.com/)
+or do it via [Yarn](https://yarnpkg.com/). 
+
+From now on, I will be using `yarn` to install our dependencies.
 
 ```bash
 $ yarn add --dev webpack@latest webpack-dev-server@latest
@@ -59,7 +62,7 @@ var config = {
   },
   output: {
     path: __dirname + '/dist', // `dist` is the destination
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
   },
 };
 
@@ -67,8 +70,6 @@ module.exports = config;
 ```
 
 Create `src/` directory as well. Now lets add [lodash](https://lodash.com) to dependencies in ```package.json``` by.
-
-From now on, I will be using `yarn` to install our dependencies.
 
 ```bash
 $ yarn add --dev lodash
@@ -93,11 +94,11 @@ To run webpack in `development mode`, type the following in your terminal.
 $ webpack
 ```
 
-*Screenshot of development mode*
+*Screenshot for development mode.*
 
 <img src="/../images/webpack/webpack-dev-server.png" style="max-width: 100%" />
 
-<b>Bundle Size:</b> 544KB
+<b>bundle size:</b> 544 KB
 
 To run webpack in ```production mode```, type the following in your terminal.
 
@@ -105,23 +106,25 @@ To run webpack in ```production mode```, type the following in your terminal.
 $ webpack -p
 ```
 
-- <b>-p</b> is for production which uglifies and minifies files.
-- <b>app.bundle.js</b> is added to `dist/` directory.
+- <b>-p</b> is for production which uglify and minify the files.
+- <b>bundle.js</b> is our bundled file which is added to `dist/` directory.
 
-*Screenshot of production mode*
+*Screenshot for production mode.*
 
 <img src="/../images/webpack/webpack-prod.png" style="max-width: 100%" />
 
-<b>Bundle Size:</b> 72.3KB
+<b>bundle size:</b> 72.3 KB
+
+We need a `local server` to run our application. So let's setup a development server.
 
 ### Step 5 - Setup webpack development server
 
-Webpack has its own development server. Let's setup that in ```webpack.config.js``` by adding the following.
+Webpack has its own development server. Let's add it to the ```webpack.config.js``` configuration.
 
 ```js
 var config = {
   devServer: {
-    contentBase: __dirname + '/src',
+    contentBase: __dirname + '/src', // `__dirname` is root of the project
   }
 }
 ```
@@ -135,31 +138,36 @@ And add the script ```bundle.js``` file in ```src/index.html``` like below.
   <title>Webpack 2 Setup</title>
 </head>
 <body>
-    
-  <script src="/app.bundle.js"></script>
+
+  <!-- bundler script file -->
+  <script src="/bundle.js"></script>
 </body>
 </html>
 ```
 
 ### Step 6 - Run development server
 
-Type the following.
-
 ```bash
 $ webpack-dev-server
 ```
 
-Open [http://localhost:8080/](http://localhost:8080/) in your browser. More [configuration details](https://webpack.js.org/configuration/dev-server/)
+Open <a href="http://localhost:8080/" target="_blank">http://localhost:8080</a> in your browser. 
 
-That's all, basic webpack config is done. 
+<i>Screenshot for development server running in browser.</i>
 
-But what about pre-processor like ```SASS```,  ```Images``` and ```ES6``` support? How to setup that? Let us see.
+<img src="/../images/webpack/browser.png" style="max-width: 100%" />
+
+More [configuration details](https://webpack.js.org/configuration/dev-server/) on webpack-dev-server. That's all, the basic webpack configuration is done. 
+
+But what about ```ES6``` support? How to setup that? Let us see.
 
 ## Loaders
 
+A Loader is a task in webpack, which allows to `require()` CSS files in javascript or convert an image into data-URLs etc,
+
 We are going to set up ```ES6 + Babel``` using a webpack babel loader.
 
-### Step 1 - Install babel loader, core & ES6 preset.
+### Step 1 - Install babel loader & ES6 preset.
 
 ```bash
 $ yarn add --dev babel-loader babel-core babel-preset-es2015
@@ -174,6 +182,7 @@ module: {
   rules: [
     {
       test: /\.js$/, // Check for all js files
+      exclude: /node_modules/,
       use: [{
         loader: 'babel-loader',
         options: { presets: ['es2015'] }
@@ -201,28 +210,9 @@ Again run the development server and check.
 $ webpack-dev-server
 ```
 
-### Step 3 - Install SASS & CSS loader
+`ES6` support is added greatly. But we need a way to debug `bundle.js` file for development since it will be bundled into a small file. So that means we have to add a <a href="http://blog.teamtreehouse.com/introduction-source-maps" target="_blank">sourcemap</a>. 
 
-```bash
-$ yarn add --dev css-loader style-loader sass-loader node-sass
-```
-
-SASS & CSS loader configuration is below.
-
-```js
-module: {
-  rules: [{
-    test: /\.(sass|scss)$/, // Check for sass or scss file names
-    use: [
-      'style-loader',
-      'css-loader',
-      'sass-loader',
-    ]
-  }]
-}
-```
-
-After `loader` setup, final steps are setting `environment` and `sourcemaps` for webpack.
+Before adding sourcemap, how do you tell which in mode webpack is running? So for that, we need to an environment for production and development.
 
 ### Step 7 - Development & Production environment
 
@@ -235,7 +225,7 @@ In `package.json` file, let's add scripts to run our dev server and production.
 }
 ```
 
-`NODE_ENV=production` is environment setup for the build.
+By setting `NODE_ENV` in the build script, we can access it in `webpack.config.js` and add configurations accordingly.
 
 ### Step 8 - Sourcemap for development & production
 
@@ -248,53 +238,54 @@ var config = {
 
 // Check if build is running in production mode, then change the sourcemap type
 if (process.env.NODE_ENV === "production") {
-  config.devtool = "source-map";
+  config.devtool = ""; // No sourcemap for production
+
+  // Add more configuration for production here like
+  // SASS & CSS loaders
+  // Offline plugin
+  // Etc,
 }
 
 module.exports = config;
 ```
 
-More information on [sourcemaps](http://erikaybar.name/webpack-source-maps-in-chrome/?utm_source=javascriptweekly&utm_medium=email).
+More information on webpack's <a href="https://webpack.js.org/configuration/devtool/#devtool" target="_blank">sourcemaps</a>.
 
 ## Final
 
-Below contains all the config for webpack from above steps.
+Below code contains all the configurations for the webpack from above steps.
 
 ```js
 var webpack = require('webpack');
 
 var config = {
   context: __dirname + '/src', // `__dirname` is root of project and `src` is source
+
   entry: {
     app: './app.js',
   },
+
   output: {
     path: __dirname + '/dist', // `dist` is the destination
-    filename: '[name].bundle.js',
-    publicPath: "/assets",
+    filename: 'bundle.js'
   },
+
+  //To run development server
+  devServer: {
+    contentBase: __dirname + '/src',
+  },
+
   module: {
     rules: [
       {
         test: /\.js$/, // Check for all js files
+        exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
           options: { presets: ['es2015'] }
         }]
-      },
-      {
-        test: /\.(sass|scss)$/, // Check for sass or scss file names
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ]
       }
     ]
-  },
-  //To run development server
-  devServer: {
-    contentBase: __dirname + '/src',
   },
 
   devtool: "eval-source-map" // Default development sourcemap
@@ -302,21 +293,21 @@ var config = {
 
 // Check if build is running in production mode, then change the sourcemap type
 if (process.env.NODE_ENV === "production") {
-  config.devtool = "source-map";
+  config.devtool = ""; // No sourcemap for production
 
-  // Can do more here
-  // JSUglify plugin
+  // Add more configuration for production here like
+  // Uglify plugin
   // Offline plugin
-  // Bundle styles seperatly using plugins etc,
+  // Etc,
 }
 
 module.exports = config;
 ```
 
-Thanks for reading my article.
-
 #### Articles References:
 
 - <a href="https://blog.flennik.com/the-fine-art-of-the-webpack-2-config-dc4d19d7f172#" target="_blank">The Fine Art of the Webpack 2 Config</a>
 - <a href="https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling" target="_blank">A Beginners Guide to Webpack 2 and Module Bundling</a>
-- <a href="https://github.com/webpack/webpack/tree/master/examples" target="_blank">Webpack examples</a>
+- <a href="https://github.com/webpack-contrib/awesome-webpack" target="_blank">A curated list of awesome webpack resources, libraries and tools.</a>
+
+Thanks for reading my article.

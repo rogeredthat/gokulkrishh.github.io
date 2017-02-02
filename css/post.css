@@ -130,15 +130,20 @@ time {
   display: inline-block;
 }
 
+.post__content ol { margin-bottom: 30px; }
+
 .post__content li {
-  line-height: 22px;
+  line-height: 25px;
+}
+
+.post__content h2 {
+  font-weight: 500;
 }
 
 .blur--bg {
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
-
 
 @media all and (max-width: 480px) {
   body.posts {
@@ -164,5 +169,10 @@ time {
   .posts footer i {
     text-align: center;
     display: block;
+  }
+
+  time {
+    font-size: 14px;
+    margin-top: 10px;
   }
 }
