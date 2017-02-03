@@ -17,11 +17,11 @@
                 <!-- <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}"></a> -->
                 {% if page.update_date %}
                     &middot;
-                    Updated {{ page.update_date | date: site.date_format }}
+                    Updated: {{ page.update_date | date: site.date_format }}
                 {% endif %}
             {% endif %}
           </time>
-          <time>, {{page.read_time}} min read</time>
+          <time>&middot; {{page.read_time}} min read</time>
         </span>
       {% endif %}
   		{{content}}
