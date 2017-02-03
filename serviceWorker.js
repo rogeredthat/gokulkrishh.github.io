@@ -2,10 +2,10 @@
 //Cache polyfil to support cacheAPI in all browsers
 importScripts("./demo/sw/cache-polyfill.js");
 
-var staticCache = "initial-site-v1";
+var cacheName = "initial-site-v2";
 
 //My Cache names
-var myCaches = [staticCache];
+var myCaches = [cacheName];
 
 //Files to cache
 var files = [
