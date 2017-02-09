@@ -2,7 +2,7 @@
 //Cache polyfil to support cacheAPI in all browsers
 importScripts("./demo/sw/cache-polyfill.js");
 
-var cacheName = "initial-site-v2";
+var cacheName = "initial-site-v1";
 
 //My Cache names
 var myCaches = [cacheName];
@@ -13,6 +13,7 @@ var files = [
   "/index.html",
   "/css/main.css",
   "/js/main.js",
+  "/js/analytics.js",
   "/images/icons/android-chrome-192x192.png",
   "/images/icons/android-chrome-512x512.png",
   "/manifest.json"
@@ -80,11 +81,11 @@ self.addEventListener('activate', (event) => {
   console.info('Event: Activate');
 
   //Remove old and unwanted caches
-  event.waitUntil( 
+  event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== cacheName) {     //cacheName = 'cache-v1'
+          if (cache !== cacheName) {
             return caches.delete(cache); //Deleting the cache
           }
         })
