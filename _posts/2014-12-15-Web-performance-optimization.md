@@ -6,7 +6,7 @@ date:   2014-12-15
 categories: performance
 comments: true
 read_time: 20
-image: /images/performance/gulpvsgrunt.gif
+image: /images/performance/chart-Nov-15-2014.png
 ---
 
 # Web Performance Optimization
