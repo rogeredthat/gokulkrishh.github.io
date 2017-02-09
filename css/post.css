@@ -88,6 +88,7 @@
 
 .post__content img {
   cursor: zoom-in;
+  max-width: 100%;
 }
 
 .zoom__container {
@@ -189,7 +190,7 @@ time {
   body.posts {
     margin: 0;
   }
-  
+
   .posts .post__content {
     padding: 10px;
   }

@@ -5,6 +5,7 @@ figure {
 tt, code, kbd, samp {
 	font-family: "Monaco", "Consolas", monospace;
   font-size: 14px;
+  line-height: 25px;
 }
 
 .highlighter-rouge pre {
@@ -36,7 +37,7 @@ tt, code, kbd, samp {
 code.highlighter-rouge {
   background-color: #ccc;
   color: #212121;
-  padding: 2px; 
+  padding: 2px;
   border-radius: 2px;
 }
 
@@ -103,7 +104,7 @@ code.highlighter-rouge {
 .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
-.gp { color: #f00; user-select: none; } 
+.gp { color: #f00; user-select: none; }
 
 .highlight code {
   color: #e6db74;
@@ -151,7 +152,7 @@ code.highlighter-rouge {
   top: -20px;
   padding-left: 10px;
   font-weight: 500;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 [class*="language-"]:hover::after {

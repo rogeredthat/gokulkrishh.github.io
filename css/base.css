@@ -1,4 +1,4 @@
-html, 
+html,
 body {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
@@ -25,7 +25,7 @@ body {
 body::-webkit-scrollbar {
   width: 6px;
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: #ddd;
   outline: 1px solid #ddd;
@@ -153,9 +153,16 @@ header a.active {
   margin-top: 40px;
 }
 
+.page__content .heading {
+	font-weight: 500;
+}
+
+.talk__list {
+	margin-bottom: 60px;
+}
+
 @media all and (max-width: 480px) {
   .talks {
     margin-bottom: 30px;
   }
 }
-
