@@ -20,7 +20,7 @@ var zoomImageElement = zoomContainerElement.querySelector(".zoom__element");
 imageElement && imageElement.forEach(function(image) {
   image.addEventListener("click", function (event) {
     var cloneImage = event.target.cloneNode();
-    zoomContainerElement.style.display = "block";
+    zoomContainerElement.classList.add("zoom__container--visible");
     zoomImageElement.appendChild(cloneImage);
     postContentElement.classList.add("blur--bg");
     document.body.style.overflow = "hidden";
@@ -28,7 +28,7 @@ imageElement && imageElement.forEach(function(image) {
 });
 
 zoomContainerElement.addEventListener("click", function (event) {
-  zoomContainerElement.style.display = "none";
+  zoomContainerElement.classList.remove("zoom__container--visible");
   zoomImageElement.innerHTML = "";
   postContentElement.classList.remove("blur--bg");
   document.body.style.overflow = "auto";

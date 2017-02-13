@@ -3,7 +3,7 @@ layout: post
 title:  "How to setup webpack 2"
 description: Webpack is module bundler for modern web applications. 
 date:   2017-02-03
-update_date: 2017-02-03
+update_date: 2017-02-13
 categories: webpack
 comments: true
 read_time: 15
@@ -24,7 +24,7 @@ image: /images/webpack/webpack.png
 1. [Install webpack](#step-2---install-webpack)
 1. [Creating webpack config](#step-3---creating-webpack-config)
 1. [Run webpack](#step-4---run-webpack)
-1. [Webpack development server](#step-5---webpack-development-server)
+1. [Webpack development server](#step-5---setup-webpack-development-server)
 1. [Run development server](#step-6---run-development-server)
 1. [Development & production env](#step-7---development--production-environment)
 1. [Sourcemap for development & production](#step-8---sourcemap-for-development--production)
