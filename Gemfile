@@ -5,3 +5,5 @@ group :jekyll_plugins do
 end
 
 gem 'jekyll-seo-tag'
+
+gem 'jekyll-sitemap'
