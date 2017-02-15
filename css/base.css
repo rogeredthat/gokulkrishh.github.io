@@ -69,14 +69,14 @@ ul li {
 
 .title {
 	margin-top: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .title__tag {
 	display: block;
   font-size: 13px;
   margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .title__tag span,
