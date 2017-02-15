@@ -1,6 +1,6 @@
 .page__about {
   min-height: 450px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .page__about ul {
@@ -11,4 +11,8 @@
 
 .page__about li {
 	margin-bottom: 10px;
+}
+
+.page__about h3 {
+  font-weight: 500;
 }

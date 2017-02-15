@@ -1,16 +1,13 @@
 .post__header {
   width: 100%;
-  position: absolute;
-  top: 0;
+  margin: 0 auto;
+  max-width: 900px;
   background: #212121;
   height: 56px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  left: 0;
-  right: 0;
+  justify-content: space-between;
   z-index: 1;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.32);
 }
 
 .post__header a:first-child {
@@ -27,7 +24,7 @@
   color: #212121;
   padding: 20px;
   word-break: break-word;
-  margin-top: 70px;
+  margin-top: 20px;
   margin-bottom: 20px;
   min-height: 1640px;
   overflow-x: hidden;
