@@ -79,19 +79,5 @@ self.addEventListener('fetch', (event) => {
 //Adding `activate` event listener
 self.addEventListener('activate', (event) => {
   console.info('Event: Activate');
-
-  //Remove old and unwanted caches
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== cacheName) {
-            return caches.delete(cache); //Deleting the cache
-          }
-        })
-      );
-    })
-  );
-
   return self.clients.claim();
 });
