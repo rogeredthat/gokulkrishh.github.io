@@ -25,10 +25,10 @@ Pseudo class in CSS is used to defined a special state of an element. Such as vi
 `:not` pseudo class selector is used to select all the elements except the one which is specified in the argument.
 
 ```html
-  <a href="/" class="link">Link 1</a>
-  <a href="">No Link</a>
-  <a href="" rel="nofollow">No Follow</a>
-  <a href="/" class="link">Link 2</a>
+<a href="/" class="link">Link 1</a>
+<a href="">No Link</a>
+<a href="" rel="nofollow">No Follow</a>
+<a href="/" class="link">Link 2</a>
 ```
 
 We have 4 `<a></a>` tags, two with a class `link` and one with `rel` attribute and one normal link. 
