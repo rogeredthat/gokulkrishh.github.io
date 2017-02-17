@@ -1,0 +1,23 @@
+.btn {
+  width: 80px;
+  height: 30px;
+  border: 1px solid;
+  text-align: center;
+  line-height: 25px;
+  cursor: default;  
+  background-color: #ccc;
+  border-width: 2px;
+  color: #000;
+  border-color: #a7a7a7;
+  display: inline-block;
+  user-select: none;
+  font-size: 14px;
+}
+
+.btn:active {
+  border-style: inset;
+}
+
+.btn:focus {
+  outline: 2px solid red;
+}
