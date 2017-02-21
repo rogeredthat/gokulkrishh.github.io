@@ -9,11 +9,11 @@ read_time: 5
 image: /images/accessibility/a11y.png
 ---
 
-# What is web accessibility?
+# What Is Web Accessibility?
 
 Web accessibility means letting the user to navigate and interact with your site by any means. Let it be a keyboard, a mouse or people with disabilities and impairments.
 
-## Writing code for accessibility
+## Writing Code For Accessibility
 
 Lets learn accessibility by starting with `HTML`. We will style both the `<div>` and `<button>` tag to look like the same.
 
