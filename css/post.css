@@ -142,7 +142,10 @@ time {
   display: inline-block;
 }
 
-.post__content ol { margin-bottom: 30px; }
+.post__content ol { 
+  margin-bottom: 30px; 
+  margin-left: 40px; 
+}
 
 .post__content li {
   line-height: 25px;
