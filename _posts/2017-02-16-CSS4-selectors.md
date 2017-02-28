@@ -106,7 +106,7 @@ header h1, .container h1 {
 | -------------                                                                 |:--------------------------|---------:|
 | <a href="https://www.w3.org/TR/selectors4/#negation">:not(s1, s2, s3)</a>     | Allows multiple arguments | 3/4      |
 | <a href="https://www.w3.org/TR/selectors4/#matches">:match(s1, s2)</a>              | Matches the elements specified in the arugment       |   4     |
-| <a href="https://www.w3.org/TR/selectors4/#attribute-case">a[href=home i]</a> | Case sensitive (home, HOME, Home etc,.)      |    4     |
+| <a href="https://www.w3.org/TR/selectors4/#attribute-case">a[href=home i]</a> | Case Insensitive (home, HOME, Home etc,.)      |    4     |
 | <a href="https://www.w3.org/TR/selectors4/#any-link-pseudo">:any-link</a>     | Matches source of hyperlink (a, link etc,.)      |    4     |
 
 ### Browser Support:
