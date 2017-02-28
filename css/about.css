@@ -16,3 +16,8 @@
 .page__about h3 {
   font-weight: 500;
 }
+
+.resume {
+  display: inline-block;
+  margin-bottom: 30px;
+}
