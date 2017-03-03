@@ -85,8 +85,11 @@
   font-weight: 500;
 }
 
-.post__content img {
+.post__content img:not(.no-zoom) { 
   cursor: zoom-in;
+}
+
+.post__content img {
   max-width: 100%;
 }
 
@@ -153,6 +156,7 @@ time {
 
 .post__content h2 {
   font-weight: 500;
+  margin-top: 20px;
 }
 
 .blur--bg {
@@ -281,4 +285,64 @@ time {
 .post__content tbody td:last-child,
 .post__content thead th:last-child {
   width: 65px;
+}
+
+.posts iframe {
+  display: block;
+  margin: 30px auto;
+}
+
+.accessibility__example {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.accessibility__example button,
+.accessibility__example div {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.post__content .btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post__content .sample-img {
+  width: 280px;
+  height: 200px;
+}
+
+.mtop30 {
+  margin-top: 30px;
+  display: block;
+}
+
+.post__example-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 120px;
+  border: 1px solid;
+  width: 280px;
+  justify-content: space-around;
+  margin: 0 auto;
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.27);
+}
+
+.post__example-form input:not([type=submit]) {
+  width: 200px;
+  height: 36px;
+  border: 1px solid #1976D2;
+  border-radius: 2px;
+}
+
+.post__example-form input[type=submit] {
+  width: 70px;
+  height: 30px;
+  display: block;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 2px;
+  background-color: #FFC107;
 }

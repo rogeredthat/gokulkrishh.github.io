@@ -13,7 +13,7 @@ if ("serviceWorker" in navigator && window.location.hostname !== "localhost") {
 
 // Zoom events for images in posts
 var postContentElement = document.querySelector(".post__content");
-var imageElement = postContentElement && postContentElement.querySelectorAll(".post__content img");
+var imageElement = postContentElement && postContentElement.querySelectorAll(".post__content img:not(.no-zoom)");
 var zoomContainerElement = document.querySelector(".zoom__container");
 var zoomImageElement = zoomContainerElement.querySelector(".zoom__element");
 
