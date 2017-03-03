@@ -3,7 +3,7 @@ layout: post
 title:  CSS4 Selectors
 description: A CSS selector is like patterns which are used to select and style the pattern matching elements.
 date: 2017-02-16
-update_date: 
+update_date: 2017-02-28
 categories: CSS
 comments: true
 read_time: 10
