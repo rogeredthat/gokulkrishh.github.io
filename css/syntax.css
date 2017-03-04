@@ -200,3 +200,7 @@ code.highlighter-rouge {
     width: 100%;
   }
 }
+
+.focusable {
+  border: 1px solid red;
+}
