@@ -5,7 +5,7 @@ description: Web accessibility means letting the user navigate and interact with
 date: 2017-02-17
 categories: accessibility
 comments: true
-read_time: 5
+read_time: 10
 image: /images/accessibility/a11y.png
 ---
 
