@@ -134,13 +134,13 @@ code.highlighter-rouge {
 [class*="language-"]::after {
   position: absolute;
   right: 1px;
-  top: -20px;
+  top: -25px;
   min-width: 10px;
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 25px;
   color: #fff;
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Roboto Mono", sans-serif;
   padding-right: 8px;
   font-weight: 500;
@@ -151,18 +151,18 @@ code.highlighter-rouge {
   content: "Code";
   position: absolute;
   min-width: 10px;
-  line-height: 20px;
+  line-height: 25px;
   background: #333; /**/
   color: #fff;
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Roboto Mono", sans-serif;
   padding-right: 3px;
   font-weight: 500;
-  height: 20px;
+  height: 25px;
   left: 0;
   right: 0;
-  top: -20px;
+  top: -25px;
   padding-left: 10px;
   font-weight: 500;
   text-transform: uppercase;
