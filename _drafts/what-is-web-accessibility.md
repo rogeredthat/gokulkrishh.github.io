@@ -49,7 +49,7 @@ We will inspect and see how the user might use your website, follow the below st
 
 ## Images
 
-Let's imagine, our user is going to read out loud on our website. Using `alt` text, a user can identify what is that image is. That's what `alt` attribute is for.
+Let's imagine, our user is going to read out loud on our website. Using `alt` text, a user can find what is that image is. That's what `alt` attribute is for.
 
 <b>Example: </b>
 
