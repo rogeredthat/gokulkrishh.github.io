@@ -1,16 +1,3 @@
-if ("serviceWorker" in navigator && window.location.hostname !== "localhost") {
-  navigator.serviceWorker
-    .register("/serviceWorker.js", {
-      scope: "/"
-    }) //Point to serviceWorker file
-    .then(function (serviceWorkerRegistration) {
-      console.log("serviceWorker is registered");
-    })
-    .catch(function (error) {
-      console.log("Failed to register serviceWorker");
-    });
-}
-
 // Zoom events for images in posts
 var postContentElement = document.querySelector(".post__content");
 var imageElement = postContentElement && postContentElement.querySelectorAll(".post__content img:not(.no-zoom)");

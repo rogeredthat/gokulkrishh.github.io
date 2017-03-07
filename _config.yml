@@ -27,6 +27,10 @@ livereload: true # You no longer need to include --livereload
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-offline
+
+offline: 
+  urls_to_cache: 
   
 twitter:
   username: gokul_i
