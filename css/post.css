@@ -241,6 +241,11 @@ time {
     flex-direction: column;
     margin-bottom: 20px;
   }
+
+  .posts iframe {
+    width: 320px;
+    margin: 40px auto;
+  }
 }
 
 .color__red .highlighter-rouge {
