@@ -25,9 +25,9 @@ highlighter: rouge
 livereload: true # You no longer need to include --livereload
 
 gems:
+  - jekyll-offline
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-offline
   
 twitter:
   username: gokul_i

@@ -8,6 +8,4 @@ gem 'jekyll-seo-tag'
 
 gem 'jekyll-sitemap'
 
-group 'jekyll-plugins' do
-  gem 'jekyll-offline', :git => 'git://github.com/jeremiak/jekyll-offline.git'
-end
+gem 'jekyll-offline', :git => 'git://github.com/jeremiak/jekyll-offline.git'
