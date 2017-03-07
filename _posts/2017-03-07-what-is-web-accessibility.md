@@ -2,10 +2,10 @@
 layout: post
 title: What is Web Accessibility?
 description: Web accessibility means letting the user navigate and interact with your site by any means. Let it be a keyboard, a mouse or people with disabilities and impairments.
-date: 2017-02-17
+date: 2017-03-07
 categories: accessibility
 comments: true
-read_time: 10
+read_time: 5
 image: /images/accessibility/a11y.png
 ---
 
@@ -15,7 +15,7 @@ Accessibility means letting the user navigate and interact with a website by any
 
 ## Web Accessibility
 
-Let us learn what is web accessibility by starting with a simple button. We will style both the `<div>` and `<button>` tag to look like a button.
+Let us learn what is web accessibility by starting with a simple html button. We will style both the `<div>` and `<button>` tag to look like a button.
 
 ## Button
 
@@ -101,7 +101,7 @@ We don't want our user to submit the form without filling required fields. That'
   </form>
 </div>
 
-<p class="mtop30">Above form will voice over the user about the `input` field and whether its `required` or not.</p>
+<p class="mtop30">Above form will voice over the user about the <code class="highlighter-rouge">input</code> field and whether its <code class="highlighter-rouge">required</code> or not.</p>
 
 ### Conclusion
 
