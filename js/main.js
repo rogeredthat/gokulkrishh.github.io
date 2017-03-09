@@ -1,3 +1,14 @@
+//If serviceWorker supports, then register it.
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register('./sw.js', { scope: "./" }) //setting scope of sw
+  .then(function(registration) {
+    console.info('Service worker is registered!');
+  })
+  .catch(function(error) {
+    console.error('Service worker failed ', error);
+  });
+}
+
 // Zoom events for images in posts
 var postContentElement = document.querySelector(".post__content");
 var imageElement = postContentElement && postContentElement.querySelectorAll(".post__content img:not(.no-zoom)");
