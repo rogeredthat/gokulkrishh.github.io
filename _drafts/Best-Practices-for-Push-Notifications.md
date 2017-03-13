@@ -11,47 +11,49 @@ image: /images/ux/push.png
 
 # Best Practices for Push Notifications
 
-As the web is moving forward and now we can do pretty much everything on the web which can be done in native applications (`android` & `iOS`). Such as `offline contents`, `push notifications`, `background sync` etc. 
+As the web is moving forward very fast and now we can do almost everything on the web which can be done in native applications (`android` & `iOS`). Such as `offline contents`, `push notifications`, `background sync` etc. 
 
-But many websites started using the push notifications in bad ways and only a few sites are using it in better ways to engage users. 
+But many websites started using these features in a bad way and only a few sites are using it in better ways to engage users. 
 
-In this post, I will explain `why` and `when` you should prompt for push notifications.
+In this post, I will explain `why` and `when` you should and shouldn't prompt for push notifications.
 
 ## Things to consider for push notifications
 
 ### Bad
 
-- Asking for persmisson on the first visit (this pattern is repeated in most of the sites)
+- Asking for permission on the `first visit` (this pattern is repeated in most of the sites)
 
-#### Example:
+- Showing push notification `permission prompt` on every page load.
 
-<center> <img src="/images/ux/flipkart.png" alt="Flipkart Website"/></center>
+#### Example: 
 
+<center class="mtop30 mbot30 b"><i>jabong.com</i></center>
 
+<center> <img src="/images/ux/jabong.png" alt="Jabong Website"/></center>
 
 ### Good
 
-- Ask for persmisson when its relevant. 
+- Ask for permission when it is `relevant`. 
 
 #### Example:
 
-After ordering something, prompt user that you will give order status using push notifications.
+After ordering something, prompt the user that you will give order status using push notifications.
+
+<center class="mtop30 mbot30 b"><i>Flipkart Website</i></center>
 
 <center> <img src="/images/ux/flipkart.png" alt="Flipkart Website"/></center>
 
-- Show an option to enable/disable push notification for certain categories.
+- Show an option to `enable/disable` push notification for push enabled categories.
 
 #### Example:
 
 <a href="https://events.google.com/io/attending/" target="_blank">Google I/O 2017</a> site has options to enable for `attendees i/o notifications`.
 
-
-
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
 <center> <img width="250px" src="/images/ux/google-io-1.png" alt="Google IO 2017 - Mobile"/></center>
 
-Also give the power to user to `disable` notifications, when he/she no longer needs it.
+Also, give the power to the user to `disable` notifications, so he/she can disable it when no longer need it.
 
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
@@ -65,8 +67,13 @@ Also give the power to user to `disable` notifications, when he/she no longer ne
 
 - Mozilla Firefox
 
-Above browsers supports push notificaions in both `desktop` & `mobile`.
+Above browsers support push notifications in both `desktop` & `mobile`.
 
+### Summing up
+
+As a user just like you, I get irritated when ever I see the push notification prompt on unwanted times and on every page load.
+
+Also to keep in mind that, once the user `blocks` the `permission` there is no way to ask for permission again unless user clears the site cache. So focus on the user and show permission prompt only when it is `relevant`. Thanks for reading my post. See you in next post :)
 
 #### References & Articles
 
