@@ -323,6 +323,14 @@ time {
   display: block;
 }
 
+.mbot30 {
+  margin-bottom: 30px;
+}
+
+.b {
+  font-weight: bold;
+}
+
 .mtop20 {
   margin-top: 20px;
   display: block;

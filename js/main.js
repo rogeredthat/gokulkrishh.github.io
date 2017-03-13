@@ -1,5 +1,5 @@
 //If serviceWorker supports, then register it.
-if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator && window.location.hostname !== "localhost") {
   navigator.serviceWorker.register('/sw.js', { scope: "./" }) //setting scope of sw
   .then(function(registration) {
     console.info('Service worker is registered!');
