@@ -17,7 +17,7 @@ But many websites started using these features in a bad way and only a few sites
 
 In this post, I will explain `why` and `when` you should and shouldn't prompt for push notifications.
 
-## Things to consider for push notifications
+## Good & Bad timing for asking permission
 
 ### Bad
 
@@ -73,7 +73,7 @@ Above browsers support push notifications in both `desktop` & `mobile`.
 
 As a user just like you, I get irritated when ever I see the push notification prompt on unwanted times and on every page load.
 
-Also to keep in mind that, once the user `blocks` the `permission` there is no way to ask for permission again unless user clears the site cache. So focus on the user and show permission prompt only when it is `relevant`. Thanks for reading my post. See you in next post :)
+So once the user `blocks` the permission, there is no way to ask for permission again unless user clears the site cache. So focus on the user and show permission prompt only when it is `relevant`. Thanks for reading my post. See you in next post :)
 
 #### References & Articles
 
