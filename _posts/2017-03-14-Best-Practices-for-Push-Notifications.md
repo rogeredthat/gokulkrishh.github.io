@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Best Practices for Push Notifications
-description: 
-date: 2017-03-13
+description: As the web is moving forward very fast and now we can do almost everything on the web which can be done in native applications (android & iOS)
+date: 2017-03-14
 categories: ux
 comments: true
 read_time: 5
@@ -15,23 +15,19 @@ As the web is moving forward very fast and now we can do almost everything on th
 
 But many websites started using these features in a bad way and only a few sites are using it in better ways to engage users. 
 
-In this post, I will explain `why` and `when` you should and shouldn't prompt for push notifications.
+In this post, I will explain `why` and `when` you `should` and `shouldn't` prompt for push notifications.
 
-## Good & Bad timing for asking permission
+### Good & Bad timing for asking permission
 
 ### Bad
 
 - Asking for permission on the `first visit` (this pattern is repeated in most of the sites)
 
-- Showing push notification `permission prompt` on every page load.
-
-#### Example: 
-
 <center class="mtop30 mbot30 b"><i>jabong.com</i></center>
 
 <center> <img src="/images/ux/jabong.png" alt="Jabong Website"/></center>
 
-### Good
+### Good 
 
 - Ask for permission when it is `relevant`. 
 
@@ -43,7 +39,13 @@ After ordering something, prompt the user that you will give order status using 
 
 <center> <img src="/images/ux/flipkart.png" alt="Flipkart Website"/></center>
 
-- Show an option to `enable/disable` push notification for push enabled categories.
+### Bad
+
+- Showing push notification `permission prompt` on every page load.
+
+### Good
+
+- Show an option to `enable` push notification for certain categories. Let the user decide whether he/she wants the push notifications.
 
 #### Example:
 
@@ -51,13 +53,19 @@ After ordering something, prompt the user that you will give order status using 
 
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
-<center> <img width="250px" src="/images/ux/google-io-1.png" alt="Google IO 2017 - Mobile"/></center>
+<center> <img width="250px" src="/images/ux/io-1.jpg" alt="Google IO 2017 - Mobile"/></center>
 
-Also, give the power to the user to `disable` notifications, so he/she can disable it when no longer need it.
+### Bad
+
+- No option to `disable` the enabled push notifications.
+
+### Good
+
+- Also, give the power to the user to `disable` notifications, so he/she can disable it when no longer need it.
 
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
-<center> <img width="250px" src="/images/ux/google-io-2.png" alt="Google IO 2017 - Mobile"/></center>
+<center> <img width="250px" src="/images/ux/io-2.jpg" alt="Google IO 2017 - Mobile"/></center>
 
 #### Browser Support
 
@@ -69,9 +77,9 @@ Also, give the power to the user to `disable` notifications, so he/she can disab
 
 Above browsers support push notifications in both `desktop` & `mobile`.
 
-### Summing up
+### Conclusion
 
-As a user just like you, I get irritated when ever I see the push notification prompt on unwanted times and on every page load.
+As a user just like you, I get irritated whenever I see the push notification prompt on unwanted times and on every page load.
 
 So once the user `blocks` the permission, there is no way to ask for permission again unless user clears the site cache. So focus on the user and show permission prompt only when it is `relevant`. Thanks for reading my post. See you in next post :)
 
@@ -82,3 +90,5 @@ So once the user `blocks` the permission, there is no way to ask for permission 
 
 - <a href="https://tests.peter.sh/notification-generator/" target="_blank">Push Notification Generator
 </a>
+
+- <a href="https://demopwa.in" target="_blank">Demo PWA</a>
