@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Best Practices for Push Notifications
-description: As the web is moving forward very fast and now we can do almost everything on the web which can be done in native applications (android & iOS)
+description: As the web is moving forward very fast and now we can do almost everything on the web which can be done in native applications (android & iOS).
 date: 2017-03-14
+update_date: 2017-03-15
 categories: ux
 comments: true
 read_time: 5
@@ -61,7 +62,7 @@ After ordering something, prompt the user that you will give order status using 
 
 ### Good
 
-- Also, give the power to the user to `disable` notifications, so he/she can disable it when no longer need it.
+- Give the power to the user to `disable` notifications, so he/she can disable it when no longer needs it.
 
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
