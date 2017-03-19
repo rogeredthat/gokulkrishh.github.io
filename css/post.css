@@ -78,7 +78,8 @@
 
 .post__content p {
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .post__content b {
