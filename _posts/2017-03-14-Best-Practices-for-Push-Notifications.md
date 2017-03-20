@@ -3,7 +3,7 @@ layout: post
 title: Best Practices for Push Notifications
 description: As the web is moving forward very fast and now we can do almost everything on the web which can be done in native applications (android & iOS).
 date: 2017-03-14
-update_date: 2017-03-15
+update_date: 2017-03-20
 categories: ux
 comments: true
 read_time: 5
