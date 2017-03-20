@@ -54,7 +54,7 @@ After ordering something, prompt the user that you will give order status using 
 
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
-<center> <img width="250px" src="/images/ux/io-1.jpg" alt="Google IO 2017 - Mobile"/></center>
+<center> <img src="/images/ux/push1.png" alt="Google IO 2017 - Mobile"/></center>
 
 ### Bad
 
@@ -66,7 +66,7 @@ After ordering something, prompt the user that you will give order status using 
 
 <center class="mtop30 mbot30 b"><i>Google I/O 2017 site</i></center>
 
-<center> <img width="250px" src="/images/ux/io-2.jpg" alt="Google IO 2017 - Mobile"/></center>
+<center> <img src="/images/ux/push2.png" alt="Google IO 2017 - Mobile"/></center>
 
 #### Browser Support
 
