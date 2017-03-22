@@ -19,6 +19,11 @@
   margin-right: 30px;
 }
 
+.post__details {
+  margin-bottom: 20px;
+  display: block;
+}
+
 .post__content {
   background: #fff;
   color: #212121;
@@ -29,6 +34,7 @@
   min-height: 1640px;
   overflow-x: hidden;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.41);
 }
 
 .post__content ::selection {
@@ -63,13 +69,13 @@
 
 .post__content a {
   color: #2196F3;
-  border-color: #ccc;
+  border-color: #2196F3;
   font-weight: 500;
 }
 
 .post__content a:focus,
 .post__content a:hover {
-  outline: thin dotted;
+  opacity: 0.9;
 }
 
 .post__content ol li {
@@ -152,7 +158,8 @@ time {
 }
 
 .post__content li {
-  line-height: 25px;
+  line-height: 30px;
+  font-size: 18px;
 }
 
 .post__content h2 {
@@ -170,7 +177,8 @@ time {
   align-items: center;
   justify-content: space-around;
   margin: 30px 0 15px;
-  width: 250px;
+  width: 320px;
+  font-weight: 500;
 }
 
 .post__share a {
@@ -180,11 +188,8 @@ time {
   border-radius: 2px;
   min-width: 60px;
   text-align: center;
-  height: 20px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 28px;
+  font-size: 13px;
 }
 
 .post__share a:not(:first-child) {
@@ -212,6 +217,7 @@ time {
 
   .posts .post__content {
     padding: 10px;
+    margin-top: 0;
   }
 
   .posts .wrapper {
@@ -234,13 +240,6 @@ time {
   time {
     font-size: 14px;
     margin-top: 10px;
-  }
-
-  .post__details {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
   }
 
   .posts iframe {

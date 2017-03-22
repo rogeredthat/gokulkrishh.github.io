@@ -53,17 +53,15 @@ a {
 	color: #fff;
 	border-bottom: 1px solid #ccc;
 	text-decoration: none;
-	transition: all 200ms cubic-bezier(.17,.67,.83,.67);
+	transition: border 100ms ease-in;
   line-height: 1.8;
   padding-bottom: 1px;
 }
 
+a:focus,
 a:hover {
-	font-weight: 500;
-}
-
-a:focus {
-  outline: 2px solid #fff;
+  border-bottom: 2px solid;
+  font-weight: 500;
 }
 
 h1, h3 {
@@ -80,7 +78,7 @@ p {
 }
 
 ul li {
-  margin: 10px 0;
+  margin: 15px 0;
   margin-left: 20px;
 }
 
@@ -117,6 +115,8 @@ footer i span {
 }
 
 footer {
+  max-width: 640px;
+  margin: 40px auto;
   margin-bottom: 20px;
 }
 
@@ -141,8 +141,10 @@ header a.active {
   width: 24px;
   height: 24px;
   border: 0;
-  margin-left: 10px;
+  margin-left: 3px;
   background-repeat: no-repeat;
+  position: relative;
+  top: 7px;
 }
 
 .social a:hover {
@@ -151,10 +153,8 @@ header a.active {
 
 .social p {
 	width: 300px;
-  display: flex;
-  align-items: center;
   font-size: 14px;
-  margin-top: -5px;
+  margin: 0 auto;
 }
 
 .social__github {
@@ -170,28 +170,37 @@ header a.active {
 	background-image: url("../images/email-circle.svg");
 	background-size: 91.5%;
 	position: relative;
-	top: 2px;
+	top: 9px !important;
 	left: 2px;
 }
 
 .page__content {
   min-height: 450px;
-  margin-top: 40px;
+  margin-top: 50px;
+  padding: 0 10px;
 }
 
 .page__content > h3 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 20px;
 }
 
 .page__content .heading {
 	font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.wrapper__page {
+  max-width: 640px;
 }
 
 .talk__list {
 	margin-bottom: 60px;
+}
+
+.post__list ul {
+  margin: 30px 0;
 }
 
 @media all and (max-width: 480px) {
@@ -203,4 +212,12 @@ header a.active {
 embed {
   display: block;
   margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.posts li {
+  line-height: 35px;
 }
