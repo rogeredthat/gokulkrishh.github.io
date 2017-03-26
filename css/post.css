@@ -85,7 +85,8 @@
 .post__content p {
   font-size: 17px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin: 0 0 1.3em;
+  padding: 0;
 }
 
 .post__content b {
@@ -341,10 +342,10 @@ time {
   flex-direction: column;
   min-height: 120px;
   width: 280px;
-  margin: 0 auto;
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.27);
   padding: 20px;
   background: #eee;
+  margin: 1.6em auto;
 }
 
 .post__example-form span,
@@ -376,4 +377,13 @@ time {
 
 .center {
   text-align: center;
+}
+
+.post__content code.highlighter-rouge {
+  font-family: inherit;
+  background: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: 500;
 }
