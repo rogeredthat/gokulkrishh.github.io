@@ -89,7 +89,7 @@ This test is similar to the previous test but with HTTP/2 support. Each test loa
 
 <center>
   <i>source: caniuse.com</i>
-  <iframe class="iframe__http2-support" src="http://caniuse.bitsofco.de/embed/index.html?feat=http2&periods=future_1,current,past_1,past_2%22" frameborder="0"></iframe>
+  <iframe class="iframe__http2-support" src="https://caniuse.bitsofco.de/embed/index.html?feat=http2&periods=future_1,current,past_1,past_2%22" frameborder="0"></iframe>
 
   <i>embed: <a target="_blank" href="https://github.com/ireade/caniuse-embed">caniuse-embed</a></i>
 </center>
