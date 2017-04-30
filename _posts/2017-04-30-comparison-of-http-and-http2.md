@@ -9,7 +9,7 @@ read_time: 12
 image: /images/performance/https/http2vshttps.jpg
 ---
 
-# Comparison of HTTPS and HTTP/2
+# Comparison of HTTP and HTTP/2
 
 This comparison blog post is to show <b>why you should move</b> from <b>HTTP</b> to <b>HTTPS</b> and why you should <b>add support</b> to <b>HTTP/2</b>. Before comparing <b>HTTP</b> vs <b>HTTP/2</b>. Lets see what is <b>HTTP</b> first.
 
