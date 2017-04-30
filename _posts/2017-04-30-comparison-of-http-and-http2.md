@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comparison of HTTP and HTTP/2
-description: Before comparing the HTTPS and HTTP/2. Let us see what is HTTP. HTTP is the set of rules for communication on the World Wide Web.
+description: Before comparing the HTTP and HTTP/2. Let us see what is HTTP. HTTP is the set of rules for communication on the World Wide Web.
 date: 2017-04-30
 categories: performance
 comments: true
