@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to setup webpack 2"
-description: Webpack is module bundler for modern web applications. 
+description: Webpack is module bundler for modern web applications. It is a highly configurable and easy to use. Reduces the network request by bundling all static assets into a single file.
 date:   2017-02-03
 update_date: 2017-02-13
 categories: webpack

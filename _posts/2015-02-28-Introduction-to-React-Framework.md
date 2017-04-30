@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to ReactJS
-description: A breif introduction about ReactJS library
+description: React is javascript library created by Facebook and Instagram. I would say React as Javascript library which can be used as V in MVC.
 date:   2015-02-28
 categories: react
 comments: true

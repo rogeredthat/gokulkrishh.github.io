@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task automation using grunt and gulp
-description: Task automation using grunt and gulp
+description: In web application development, there are numerous tasks involved like minify, uglify and compressing JS and CSS files.
 date:   2014-10-27
 categories: gulp
 comments: true

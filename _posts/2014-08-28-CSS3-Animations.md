@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS3 Animations
-description: CSS3 Animations with simple explanation.
+description: The days when people used flash for animation has become almost obsolete. Its time for CSS3 animation takeover.
 date:   2014-08-28
 categories: CSS
 comments: true

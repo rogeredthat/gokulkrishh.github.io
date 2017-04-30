@@ -70,11 +70,12 @@ h1, h3 {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 20px 0;
+  margin: 30px 0 20px;
 }
 
 p {
-  margin: 10px 0;
+  margin: 12px 0 1.1em;
+  line-height: 1.8;
 }
 
 ul li {
@@ -118,6 +119,7 @@ footer {
   max-width: 640px;
   margin: 40px auto;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 footer i span {
@@ -188,7 +190,7 @@ header a.active {
 
 .page__content .heading {
 	font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .wrapper__page {
@@ -199,8 +201,8 @@ header a.active {
 	margin-bottom: 60px;
 }
 
-.post__list ul {
-  margin: 30px 0;
+.post__list {
+  margin: 10px 0;
 }
 
 @media all and (max-width: 480px) {
@@ -218,6 +220,54 @@ embed {
   text-align: center;
 }
 
-.posts li {
+.post__list h4 {
+  font-size: 18px;
+  border-bottom: 1px dashed;
+  padding-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.post__list .posts li a {
+  font-size: 17px;
+  font-weight: 500;
+  border: 0;
+}
+
+.post__list .posts li {
   line-height: 35px;
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  margin-left: 0;
+  margin-bottom: 40px;
+}
+
+.post__list .posts .post-date {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.post__list .posts li .post-read-more {
+  background: #fff;
+  color: #212121;
+  padding: 0 10px;
+  border-radius: 33px;
+  font-size: 12px;
+  border: none;
+  height: 30px;
+  line-height: 27px;
+}
+
+.post__list .posts li .post-read-more:hover {
+  opacity: 0.9;
+}
+
+.post__list .posts li .post-read-more span {
+  font-size: 17px;
+}
+
+.post__list p {
+  font-size: 14px;
+  padding-left: 2px;
 }

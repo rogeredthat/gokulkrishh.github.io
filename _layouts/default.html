@@ -7,7 +7,7 @@
 	    <div class="page__content {{site.posts | size}}">
 	    {% assign postlength = (site.posts | size)  %}
 	    {% if postlength > 0 %}
-  			<h3 class="heading">Posts</h3>
+  			<h3 class="heading">Blog Posts</h3>
 			{% endif %}
     		<ul class="post__list">
           {% for post in site.posts  %}
@@ -24,8 +24,12 @@
               {% endif %}
             {% endif %}
               <li>
-                <span class="post-date">{{ post.date | date: '%d %B ' }} &raquo;</span>
+                <span class="post-date">{{ post.date | date: '%d %b %Y ' }}</span>
                 <a href="{{ post.url }}">{{ post.title }}</a>
+                <p>{{ post.description }}</p>
+                {% if post.excerpt != post.content %}
+                  <a class="post-read-more" href="{{ site.baseurl }}{{ post.url }}">Read More <span>→</span></a>
+                {% endif %}
               </li>
             {% if forloop.last %}
               </ul>

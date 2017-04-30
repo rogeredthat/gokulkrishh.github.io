@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Web Performance Optimization
-description: Web Performance Optimization
+description: An average user stays in your site if the page loads in < 1000ms. In 2014, an average page size is 1.9MB.
 date:   2014-12-15
 categories: performance
 comments: true

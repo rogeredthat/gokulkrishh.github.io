@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chrome DevTools
-description: Development workflow with chrome devtools.
+description: Google chrome is one of the fastest browser around and using chrome devTools for development is simply awesome.
 date:   2014-09-12
 categories: devtools
 comments: true
