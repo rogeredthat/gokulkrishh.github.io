@@ -4,8 +4,8 @@
   "description": "Source code for my blog (Jekyll 3.0)",
   "main": "\"\"",
   "scripts": {
-    "drafts": "jekyll server --host=0.0.0.0 --drafts",
-    "server": "jekyll server --host=0.0.0.0",
+    "drafts": "npm run concat-files && jekyll server --host=0.0.0.0 --drafts --watch",
+    "server": "npm run concat-files && jekyll server --host=0.0.0.0 --watch",
     "concat-files": "concat -o ./css/styles.css ./css/base.css ./css/about.css ./css/post.css ./css/syntax.css ./css/screens.css ./css/examples.css",
     "precache": "./node_modules/sw-precache/cli.js --config=sw-precache-config.json",
     "build": "npm run concat-files && npm run precache && jekyll build"

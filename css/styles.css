@@ -60,7 +60,7 @@ a {
 
 a:focus,
 a:hover {
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
   font-weight: 500;
 }
 
@@ -89,6 +89,10 @@ ul {
 
 small i {
   margin-bottom: 20px;
+}
+
+strong {
+  font-weight: 500;
 }
 
 .wrapper {
@@ -367,9 +371,10 @@ embed {
 }
 
 .post__content a {
-  color: #2196F3;
-  border-color: #2196F3;
+  color: #0366d6;
+  border-color: #0366d6;
   font-weight: 500;
+  font-size: 16px;
 }
 
 .post__content a:focus,
