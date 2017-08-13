@@ -3,6 +3,7 @@ layout: post
 title: Tools I use for web development
 description: As a web developer, I use a lot of tools (new & old), utilities & tips from my discovery and from lots of people around.
 date: 2017-08-10
+update_date: 2017-08-13
 categories: tools
 comments: true
 read_time: 5
@@ -45,13 +46,16 @@ Most of the time I try to use fewer extensions & plugins. So a few I use are bel
 - [Skitch](https://evernote.com/products/skitch) - To add annotation, shapes etc,.
 - [Sketch](https://www.sketchapp.com/) - My [dribble shots](https://dribbble.com/gokulkrishh).
 - [Virtual Box](https://www.virtualbox.org/wiki/Mac%20OS%20X%20build%20instructions) - To run IE10+ browsers and other windows app.
+- [Kap](https://getkap.co/) - Capture your screen and output it as GIF, Video.
+- [Keycastr](https://github.com/keycastr/keycastr) - KeyCastr, an open-source keystroke visualizer.
+- [Muzzle](https://muzzleapp.com/) - To mute your mac notifications while sharing screen (PS: Read notifications examples in their website 😜)
 
 ## 🎉 Browsers 
 
   - Chrome, Chrome Canary (**my default browser**)
   - Opera 
   - Mozilla Firefox, Mozilla Firefox Nighly, 
-  - Safari & Safari Technology Preview.
+  - Safari, Safari Technology Preview & Nightly (SW is supported 😬).
 
 ## 🔩 Browser Extensions
 
