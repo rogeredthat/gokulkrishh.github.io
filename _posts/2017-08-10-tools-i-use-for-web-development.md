@@ -3,7 +3,7 @@ layout: post
 title: Tools I use for web development
 description: As a web developer, I use a lot of tools (new & old), utilities & tips from my discovery and from lots of people around.
 date: 2017-08-10
-update_date: 2017-08-13
+update_date: 2017-08-14
 categories: tools
 comments: true
 read_time: 5
@@ -19,6 +19,7 @@ I will try to update this post regularly. Most of them are **OSX apps**.
 ## 💻 Terminal
 
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) is my default terminal.
+- [Consolas](https://www.fonts.com/font/microsoft-corporation/consolas?QueryFontType=Web&src=GoogleWebFonts) - Terminal font.
 - [Dracula](https://draculatheme.com/zsh/) theme (slighty customized).
 - Lots of custom & borrowed [aliases](https://github.com/gokulkrishh/dotfiles/blob/master/oh-my-zsh/aliases) (super lazy me 😆).
 
@@ -26,7 +27,7 @@ I will try to update this post regularly. Most of them are **OSX apps**.
 ## ⌨️ Code Editor
 
 - [VSCode Editor](https://code.visualstudio.com/Download) - An open source code editor from microsoft.
-- [Default Dark+](https://code.visualstudio.com/docs/getstarted/themes) - Let me know if you have any good suggestions.
+- [Dracula](https://draculatheme.com/) - Let me know if you have any good suggestions.
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons) - Editor icons for all type of files.
 - [Consolas](https://www.fonts.com/font/microsoft-corporation/consolas?QueryFontType=Web&src=GoogleWebFonts) - Editor font.
 - [User Settings](https://github.com/gokulkrishh/dotfiles/blob/master/vscode/user-settings.json) - Editor preferences.
