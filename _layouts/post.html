@@ -16,12 +16,11 @@
           <time datetime="{{ page.date | date_to_xmlschema }}">
             {{ page.date | date: '%B %d, %Y' }}
             {% if site.disqus_shortname %}
-                <!-- &middot; -->
-                <!-- <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}"></a> -->
-                <!-- {% if page.update_date %}
-                    &middot;
-                    Updated: {{ page.update_date | date: '%B %d, %Y' }}
-                {% endif %} -->
+              <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
+              {% if page.update_date %}
+                  &middot;
+                  Updated: {{ page.update_date | date: '%B %d, %Y' }}
+              {% endif %}
             {% endif %}
           </time>
           <time>&middot; {{page.read_time}} min read</time>
